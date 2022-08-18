@@ -58,4 +58,14 @@ Googling helps, and the [Home Assistant site](https://www.home-assistant.io/) ha
 
 ## What exactly do I have (in case you are curious)
 
-1. Server.  Raspberry Pi4 with a 1TB SSD. I also have a [Coral TPU](https://coral.ai/products/accelerator), a [Zigbee USB stick](https://www.amazon.com/dresden-elektronik-ConBee-Universal-Gateway/dp/B07PZ7ZHG5), and a [Z-Wave USB stick](https://www.amazon.com/Z-Wave-Stick-Assistant-HomeSeer-Software/dp/B07GNZ56BK/ref=sr_1_4?crid=2DD46HYRSA669&keywords=z-wave&qid=1660804098&s=electronics&sprefix=z-wave%2Celectronics%2C55&sr=1-4).
+1. **Hardware**.  Raspberry Pi4 with a 1TB SSD. I also have a [Coral TPU](https://coral.ai/products/accelerator), a [Zigbee USB stick](https://www.amazon.com/dresden-elektronik-ConBee-Universal-Gateway/dp/B07PZ7ZHG5), and a [Z-Wave USB stick](https://www.amazon.com/Z-Wave-Stick-Assistant-HomeSeer-Software/dp/B07GNZ56BK/ref=sr_1_4?crid=2DD46HYRSA669&keywords=z-wave&qid=1660804098&s=electronics&sprefix=z-wave%2Celectronics%2C55&sr=1-4).
+
+2. I run [Home Assistant Operating System]()https://www.home-assistant.io/installation/raspberrypi).
+
+3. Through integrations, I control Hue lights, Samsung Smartthings (moisture sensors), an Orbit B-Hive irrigation system, and TP-Link smart plugs, MyQ garage door controller, Aqara door sensors (all exterior) and Lutron Caseta switches.  The Orbit and MyQ systems rely on their cloud but the Hue and Samsung and TP-Link systems talk directly to HASS via Zigbee (I had to reset them and pair them with HASS, after which I turned off their hubs). Lutron Caseta has a hub but does not need cloud/internet. I also have a few Aoycocr smart plugs that I [hacked](https://www.youtube.com/watch?v=O5GYh470m5k&t=8s) to run [Tasmota](https://tasmota.github.io/docs/) but Aoycocr updated their firmware about 2 yrs ago so that this process no longer works.
+
+4. Some DIY things. I have a couple of things.  I used a [Particle Photon](https://store.particle.io/products/photon) to create a [utilities monitor](https://github.com/cecat/UtilityWatchMQTT) to track the duty cycles and activities of my sump pump, water heater, and HVAC system.  This system checks that state of these utilities every few seconds and reports to HASS using MQTT. For a home 2h away I used a [Particle Electron](https://docs.particle.io/electron/) (celular, so does not rely on power/Internet and thus can report such outages) to create a [crawlspace temperature monitor](https://github.com/cecat/Lake-Watch) so that I am alerted whenever the crawspace drops near to freezing temperatures.  
+
+5. I have a number of Add-ons such as databases, Grafana for fancy time series graphs, Frigate, and MQTT (which Frigate uses to communicate with HASS).
+
+
