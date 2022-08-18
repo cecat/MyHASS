@@ -37,6 +37,8 @@ My suggestion is to start with the systems you have (if any), and integrate them
 
 If you don't have any systems, you might start with something like moisture detection, smart outlets for things like holiday lights or outdoor lights (e.g., turn them on at dusk and off at midnight).  If you are adventurous, you might skip right to Frigate and have the lights turn on when a human shows up after dark (yes, you can do this with many products via motion detection, but they can't tell the difference between a human and a strong wind hitting tree branches).  From there you could try some of the systems I use or other things you find in the plentiful online documentation, community forums, and YouTube channels from the HASS community.
 
+If you do go with Frigate you will want a Coral TPU but a Raspberry Pi (see Hardware discussion below) can keep up with a single camera, albeit Frigate will use 70-80% of the CPU.  I really like the Amcrest wifi cameras (see my inventory of devices below) - inexpensive and easy to config in Frigate.  
+
 ## Begin
 
 ### Hardware.
