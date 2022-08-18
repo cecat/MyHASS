@@ -1,11 +1,11 @@
 # A Primer on Home Assistant (HASS)
 Charlie Catlett (August 2022)
 
-(note- I am referencing specific products but I have no relationship with any of the companies, and will not make any money if you buy them.  All it means is that they work for me, but there are likely other options in many cases as well.]
+*[note- I am referencing specific products but I have no relationship with any of the companies, and will not make any money if you buy them.  All it means is that they work for me, but there are likely other options in many cases as well.]*
 
 ## If you are anxious to get started...
 
-You could skip the stuff below and head straight to the Statup Guide, which is fabulous.  You may also want to check out some of the getting started tips (selecting hardware, mistakes to avoid, etc.) at my favorite source of help for Home ssistant - [Everything Smart Home](https://www.youtube.com/c/EverythingSmartHome).
+You could skip the stuff below and head straight to the Home Assistant [Getting Started pages](https://www.home-assistant.io/getting-started/), which is fabulous.  You may also want to check out some of the getting started tips (selecting hardware, mistakes to avoid, etc.) at my favorite source of help for Home ssistant - [Everything Smart Home](https://www.youtube.com/c/EverythingSmartHome).
 
 ## Why am I using HASS?
 
@@ -52,4 +52,4 @@ Here you should dive into the fabulous online documentation that will walk you t
 
 ## Where can I find more help and ideas?
 
-Googling helps, but there is also an active [Home Assistant Community](https://www.home-assistant.io/getting-started/join-the-community/) you can join, which has lots of resources and tutorials.  I myself have found [Everything Smart Home](https://www.youtube.com/c/EverythingSmartHome) to be excellent for both beginning and advanced things.  For instance, tutorials on [installing your first system](https://www.youtube.com/watch?v=SHg6fa0x7OA), one on [mistakes to avoid](https://www.youtube.com/watch?v=i1083cCR2CI), and another on things to do once you are up and running. You might start with the *Home Assistant Guide* [playlist](https://www.youtube.com/c/EverythingSmartHome/playlists) there.
+Googling helps, and the [Home Assistant site](https://www.home-assistant.io/) has extensive documentation on all aspects, integrations, add-ons, etc. of Home Assistant.  There is also an active [Home Assistant Community](https://www.home-assistant.io/getting-started/join-the-community/) you can join, which has lots of resources and tutorials.  I myself have found [Everything Smart Home](https://www.youtube.com/c/EverythingSmartHome) to be excellent for both beginning and advanced things.  For instance, tutorials on [installing your first system](https://www.youtube.com/watch?v=SHg6fa0x7OA), one on [mistakes to avoid](https://www.youtube.com/watch?v=i1083cCR2CI), and another on things to do once you are up and running. You might start with the *Home Assistant Guide* [playlist](https://www.youtube.com/c/EverythingSmartHome/playlists) there.
