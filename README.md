@@ -63,7 +63,7 @@ Googling helps, and the [Home Assistant site](https://www.home-assistant.io/) ha
 2. I run [Home Assistant Operating System]()https://www.home-assistant.io/installation/raspberrypi).
 
 3. Note again, this is what I have accumulated over a number of years and they work for me, but there may well be better systems in many of these instances today, so this is just meant as an example, not as specific product recommendations. Through HASS integrations, I control 
-- Hue lights 
+- [Hue lights](https://www.philips-hue.com/en-us) 
 - Samsung Smartthings ([moisture sensors](https://www.amazon.com/Aeotec-SmartThings-Battery-Powered-Compatible/dp/B095TR9NYR/ref=sr_1_4?crid=2GGGMCCWZAQNT&keywords=smartthings+water+leak+sensor&qid=1660831204&sprefix=smartthings+%2Caps%2C97&sr=8-4))
 - [Orbit B-Hive irrigation system](https://www.amazon.com/Orbit-57950-12-Station-Controller-Compatible/dp/B01D15HOTU/ref=sr_1_5?crid=GI5GJOT02AR6&keywords=b-hyve+orbit&qid=1660832013&sprefix=b-hive+orbit%2Caps%2C96&sr=8-5)
 - [TP-Link smart plugs](https://www.amazon.com/gp/product/B01KBFWW0O/ref=ppx_yo_dt_b_search_asin_title?ie=UTF8&psc=1)
