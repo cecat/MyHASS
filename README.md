@@ -33,7 +33,7 @@ My suggestion is to start with the systems you have (if any), and integrate them
 
 If you don't have any systems, you might start with something like moisture detection, smart outlets for things like holiday lights or outdoor lights (e.g., turn them on at dusk and off at midnight).  If you are adventurous, you might skip right to Frigate and have the lights turn on when a human shows up after dark (yes, you can do this with many products via motion detection, but they can't tell the difference between a human and a strong wind hitting tree branches).  From there you could try some of the systems I use or other things you find in the plentiful online documentation, community forums, and YouTube channels from the HASS community.
 
-## How do I begin?
+## Begin
 
 ### Hardware.
 
@@ -52,7 +52,7 @@ Here you should dive into the fabulous online documentation that will walk you t
 ### Follow the **[Getting Started guide](https://www.home-assistant.io/getting-started/)**!
 
 
-## Where can I find more help and ideas?
+## More Help and Ideas
 
 Googling helps, and the [Home Assistant site](https://www.home-assistant.io/) has extensive documentation on all aspects, integrations, add-ons, etc. of Home Assistant.  There is also an active [Home Assistant Community](https://www.home-assistant.io/getting-started/join-the-community/) you can join, which has lots of resources and tutorials.  I myself have found [Everything Smart Home](https://www.youtube.com/c/EverythingSmartHome) to be excellent for both beginning and advanced things.  For instance, tutorials on [installing your first system](https://www.youtube.com/watch?v=SHg6fa0x7OA), one on [mistakes to avoid](https://www.youtube.com/watch?v=i1083cCR2CI), and another on things to do once you are up and running. You might start with the *Home Assistant Guide* [playlist](https://www.youtube.com/c/EverythingSmartHome/playlists) there.
 
