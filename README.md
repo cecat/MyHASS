@@ -58,4 +58,4 @@ Googling helps, and the [Home Assistant site](https://www.home-assistant.io/) ha
 
 ## What exactly do I have (in case you are curious)
 
-1. Server.  Raspberry Pi4 with a 1TB SSD. I also have a [Coral TPU](https://coral.ai/products/accelerator), a [Zigbee USB stick[(https://www.amazon.com/dresden-elektronik-ConBee-Universal-Gateway/dp/B07PZ7ZHG5), and a [Z-Wave USB stick](https://www.amazon.com/Z-Wave-Stick-Assistant-HomeSeer-Software/dp/B07GNZ56BK/ref=sr_1_4?crid=2DD46HYRSA669&keywords=z-wave&qid=1660804098&s=electronics&sprefix=z-wave%2Celectronics%2C55&sr=1-4).
+1. Server.  Raspberry Pi4 with a 1TB SSD. I also have a [Coral TPU](https://coral.ai/products/accelerator), a [Zigbee USB stick](https://www.amazon.com/dresden-elektronik-ConBee-Universal-Gateway/dp/B07PZ7ZHG5), and a [Z-Wave USB stick](https://www.amazon.com/Z-Wave-Stick-Assistant-HomeSeer-Software/dp/B07GNZ56BK/ref=sr_1_4?crid=2DD46HYRSA669&keywords=z-wave&qid=1660804098&s=electronics&sprefix=z-wave%2Celectronics%2C55&sr=1-4).
