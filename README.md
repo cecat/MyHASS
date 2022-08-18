@@ -43,7 +43,7 @@ If you don't have any systems, you might start with something like moisture dete
 
 3. Other.  If you plan to use Frigate, you will need to either go with one of the beefier servers or get a Coral TPU (USB device that plugs into your server).  A Pi3 is probably fine if all you are doing is controlling lights and monitoring sensors, but Frigate will bring it to its knees (it will be unresponsive).  A Pi4 can barely keep up with 1 camera, using 80% of its CPU to do so and giving you sluggish performance interacting with the system.
 
-NOTE: Unfortunately as of August 2022 it is nearly impossible to find either a Pi4 or a Coral TPU (escept from opportunitists at insane prices). You could get started with a Pi3 but don't try to use Frigate as it will make the system more or less unresponsive, using 99% of the CPU.
+NOTE: Unfortunately as of August 2022 it is nearly impossible to find either a Pi4 or a Coral TPU (except from opportunitists at insane prices). You could get started with a Pi3 but don't try to use Frigate as it will make the system more or less unresponsive, using 99% of the CPU.
 
 ### Software and Installation
 
