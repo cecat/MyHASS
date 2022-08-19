@@ -75,7 +75,7 @@ Googling helps, and the [Home Assistant site](https://www.home-assistant.io/) ha
 - [TP-Link smart plugs](https://www.amazon.com/gp/product/B01KBFWW0O/ref=ppx_yo_dt_b_search_asin_title?ie=UTF8&psc=1)
 - [MyQ garage door controller](https://www.amazon.com/Smart-Garage-Opener-Chamberlain-myQ-G0401/dp/B08GD3D9YJ/ref=sr_1_1?crid=2B01WH1IK0Z5&keywords=myq&qid=1660832189&s=hi&sprefix=myq%2Ctools%2C113&sr=1-1) (works with most modern but *not all* openers)
 - [Aqara door sensors](https://www.amazon.com/Aqara-MCCGQ11LM-Window-Sensor-White/dp/B07D37VDM3/ref=sr_1_4?crid=Y9IKHD916DYA&keywords=aqara&qid=1660832246&s=hi&sprefix=aqara%2Ctools%2C90&sr=1-4) (all exterior). I was able to turn off the hub, reset these units, and add them to my HASS system via the Zigbee integration.
-- [Lutron Caseta switches](https://www.amazon.com/s?k=lutron+caseta&i=tools&crid=3BAI2YG29DFSV&sprefix=lutron%2Ctools%2C79&ref=nb_sb_ss_ts-doa-p_2_6) (requres hub and modern wiring with ground in switch boxes)).
+- [Lutron Caseta switches](https://www.amazon.com/s?k=lutron+caseta&i=tools&crid=3BAI2YG29DFSV&sprefix=lutron%2Ctools%2C79&ref=nb_sb_ss_ts-doa-p_2_6) (I have not explored whether I can ditch the hub) Make sure you have relatively  modern wiring with ground in switch boxes).
 
 The Orbit and MyQ systems rely on their cloud but the Hue and Samsung and TP-Link systems talk directly to HASS via Zigbee (I had to reset them and pair them with HASS, after which I turned off their hubs). Lutron Caseta has a hub but does not need cloud/internet. I also have a few Aoycocr smart plugs that I [hacked](https://www.youtube.com/watch?v=O5GYh470m5k&t=8s) to run [Tasmota](https://tasmota.github.io/docs/) but Aoycocr updated their firmware about 2 yrs ago so that this process no longer works.
 
