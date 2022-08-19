@@ -68,7 +68,7 @@ Googling helps, and the [Home Assistant site](https://www.home-assistant.io/) ha
 
 2. I run [Home Assistant Operating System](https://www.home-assistant.io/installation/raspberrypi).
 
-3. Note again, this is what I have accumulated over a number of years and they work for me, but there may well be better systems in many of these instances today, so this is just meant as an example, not as specific product recommendations. Through HASS integrations, I control 
+3. What HASS Controls in my house:  
 - [Hue lights](https://www.philips-hue.com/en-us) 
 - Samsung Smartthings ([moisture sensors](https://www.amazon.com/Aeotec-SmartThings-Battery-Powered-Compatible/dp/B095TR9NYR/ref=sr_1_4?crid=2GGGMCCWZAQNT&keywords=smartthings+water+leak+sensor&qid=1660831204&sprefix=smartthings+%2Caps%2C97&sr=8-4)). I was able to turn off the hub, reset these units, and add them to my HASS system via the Zigbee integration.
 - [Orbit B-Hive irrigation system](https://www.amazon.com/Orbit-57950-12-Station-Controller-Compatible/dp/B01D15HOTU/ref=sr_1_5?crid=GI5GJOT02AR6&keywords=b-hyve+orbit&qid=1660832013&sprefix=b-hive+orbit%2Caps%2C96&sr=8-5)
@@ -78,6 +78,8 @@ Googling helps, and the [Home Assistant site](https://www.home-assistant.io/) ha
 - [Lutron Caseta switches](https://www.amazon.com/s?k=lutron+caseta&i=tools&crid=3BAI2YG29DFSV&sprefix=lutron%2Ctools%2C79&ref=nb_sb_ss_ts-doa-p_2_6) (requres hub and modern wiring with ground in switch boxes)).
 
 The Orbit and MyQ systems rely on their cloud but the Hue and Samsung and TP-Link systems talk directly to HASS via Zigbee (I had to reset them and pair them with HASS, after which I turned off their hubs). Lutron Caseta has a hub but does not need cloud/internet. I also have a few Aoycocr smart plugs that I [hacked](https://www.youtube.com/watch?v=O5GYh470m5k&t=8s) to run [Tasmota](https://tasmota.github.io/docs/) but Aoycocr updated their firmware about 2 yrs ago so that this process no longer works.
+
+Note, again, these are just what I have, some of which I purchased years ago, and the collection evolves over time (not shown are things that didn't make the cut, were retired and replaced, etc.) as new or better products emerge, so there are no doubt better options in many cases.
 
 4. Some DIY things. I have a couple of things.  I used a [Particle Photon](https://store.particle.io/products/photon) to create a [utilities monitor](https://github.com/cecat/UtilityWatchMQTT) to track the duty cycles and activities of my sump pump, water heater, and HVAC system.  This system checks that state of these utilities every few seconds and reports to HASS using MQTT. For a home 2h away I used a [Particle Electron](https://docs.particle.io/electron/) (celular, so does not rely on power/Internet and thus can report such outages) to create a [crawlspace temperature monitor](https://github.com/cecat/Lake-Watch) so that I am alerted whenever the crawspace drops near to freezing temperatures.  
 
