@@ -96,11 +96,6 @@ I'm working on a couple of things at the moment.  Having set up Frigate to take 
 I'm also exploring [ESPHome](https://esphome.io/) which looks like a very nice way to create simple, very cheap, wifi-connected sensors for HASS.  For instance, a [Particle Photon](https://store.particle.io/products/photon) is about $20 and one can get [ESP devices with GPIO pins](https://www.amazon.com/gp/product/B081PX9YFV/ref=ppx_yo_dt_b_asin_title_o03_s00?ie=UTF8&psc=1) for about $3 each.  I'm building a set of these with [temperature sensors](https://randomnerdtutorials.com/guide-for-ds18b20-temperature-sensor-with-arduino/) to evaluate the performance of our HVAC system throughout the home. 
 
 Testing some MD here (nothing to see here, sorry)
-<img src="./main/media/Legacy1999.jpg" align="left" width="200px"/>
-some text floating around the image
-<br clear="left"/>
-
-Testing some MD here (nothing to see here, sorry)
-<img src="./media/Legacy1999.jpg" align="left" width="200px"/>
+<img src="media/Legacy1999.jpg" align="left" width="200px"/>
 some text floating around the image
 <br clear="left"/>
