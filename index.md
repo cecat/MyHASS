@@ -186,7 +186,7 @@ there.
 
 2. **HA Install**: I run [Home Assistant Operating System](https://www.home-assistant.io/installation/raspberrypi).
 
-3. **What HASS Controls in my house**:  
+3. **Commercial Systems**:  
 - [Hue lights](https://www.philips-hue.com/en-us) 
 - Samsung Smartthings ([moisture sensors](https://www.amazon.com/Aeotec-SmartThings-Battery-Powered-Compatible/dp/B095TR9NYR/ref=sr_1_4?crid=2GGGMCCWZAQNT&keywords=smartthings+water+leak+sensor&qid=1660831204&sprefix=smartthings+%2Caps%2C97&sr=8-4)). I was able to turn off the hub, reset these units, and add them to my HASS system via the Zigbee integration.
 - [Orbit B-Hive irrigation system](https://www.amazon.com/Orbit-57950-12-Station-Controller-Compatible/dp/B01D15HOTU/ref=sr_1_5?crid=GI5GJOT02AR6&keywords=b-hyve+orbit&qid=1660832013&sprefix=b-hive+orbit%2Caps%2C96&sr=8-5)
