@@ -18,10 +18,9 @@ There are lots of smart/automated home products, many of which interoperate, all
 <img src="/media/Legacy1999.jpg" align="left" width="200px"/>
 I started with DIY systems I built myself in about 1999. I created my first system using an old fashioned thermostat wired to a Radio Shack auto-dialer (and a couple of (big) 6v batteries in case of power outages), so if the power or heat went out in winter (dropping the temperature, triggering the thermostat), I'd get a call (this saved my pipes multiple times). (Photo shows the original install, not sure what happened to that thermostat.  But the install date on the schematic is Jan 7, 1999.)
 Multiple generations of DIY later I found myself accumulating many very nice (but independent) home automation systems.  Philips Hue lights (and a hub), Samsung Smartthings (and a hub), Amazon Blink cameras (and a hub), Aqara door sensors (and a hub), various smart outlets (no hub, or rather the hub is in China...), etc.  All of those hubs rely on Internet connectivity to commercial clouds. 
+I adopted HASS to (a) bring all of these systems together, and (b) move as much as possible away from reliance on Internet/cloud for my automations and data.
 
 <br clear="left"/>
-
-I adopted HASS to (a) bring all of these systems together, and (b) move as much as possible away from reliance on Internet/cloud for my automations and data.
 
 ## What am I doing with HASS?
 
