@@ -99,3 +99,7 @@ Testing some MD here (nothing to see here, sorry)
 <img src="media/Legacy1999.jpg" align="left" width="200px"/>
 some text floating around the image
 <br clear="left"/>
+Testing alt MD here (nothing to see here, sorry)
+<img src="/media/Legacy1999.jpg" align="left" width="200px"/>
+some text floating around the image
+<br clear="left"/>
