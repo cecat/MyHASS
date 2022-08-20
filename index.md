@@ -191,22 +191,14 @@ there.
 - Samsung Smartthings ([moisture sensors](https://www.amazon.com/Aeotec-SmartThings-Battery-Powered-Compatible/dp/B095TR9NYR/ref=sr_1_4?crid=2GGGMCCWZAQNT&keywords=smartthings+water+leak+sensor&qid=1660831204&sprefix=smartthings+%2Caps%2C97&sr=8-4)). I was able to turn off the hub, reset these units, and add them to my HASS system via the Zigbee integration.
 - [Orbit B-Hive irrigation system](https://www.amazon.com/Orbit-57950-12-Station-Controller-Compatible/dp/B01D15HOTU/ref=sr_1_5?crid=GI5GJOT02AR6&keywords=b-hyve+orbit&qid=1660832013&sprefix=b-hive+orbit%2Caps%2C96&sr=8-5)
 - [TP-Link smart plugs](https://www.amazon.com/gp/product/B01KBFWW0O/ref=ppx_yo_dt_b_search_asin_title?ie=UTF8&psc=1)
-- [MyQ garage door controller](https://www.amazon.com/Smart-Garage-Opener-Chamberlain-myQ-G0401/dp/B08GD3D9YJ/ref=sr_1_1?crid=2B01WH1IK0Z5&keywords=myq&qid=1660832189&s=hi&sprefix=myq%2Ctools%2C113&sr=1-1) (works with most modern but *not all* openers)
+- [MyQ garage door controller](https://www.amazon.com/Smart-Garage-Opener-Chamberlain-myQ-G0401/dp/B08GD3D9YJ/ref=sr_1_1?crid=2B01WH1IK0Z5&keywords=myq&qid=1660832189&s=hi&sprefix=myq%2Ctools%2C113&sr=1-1) (works with most modern but *not all* openers) (Relies on MyQ cloud).
 - [Aqara door sensors](https://www.amazon.com/Aqara-MCCGQ11LM-Window-Sensor-White/dp/B07D37VDM3/ref=sr_1_4?crid=Y9IKHD916DYA&keywords=aqara&qid=1660832246&s=hi&sprefix=aqara%2Ctools%2C90&sr=1-4) (all exterior). I was able to turn off the hub, reset these units, and add them to my HASS system via the Zigbee integration.
 - [Lutron Caseta switches](https://www.amazon.com/s?k=lutron+caseta&i=tools&crid=3BAI2YG29DFSV&sprefix=lutron%2Ctools%2C79&ref=nb_sb_ss_ts-doa-p_2_6) (I have not explored whether I can ditch the hub) Make sure you have relatively  modern wiring with ground in switch boxes).
-
-The Orbit and MyQ systems rely on their cloud but the Hue and Samsung and
-TP-Link systems talk directly to HASS via Zigbee (I had to reset them and pair
-them with HASS, after which I turned off their hubs). Lutron Caseta has a hub
-but does not need cloud/internet. I also have a few Aoycocr smart plugs that I
+(Uses a hub but does not need cloud/internet.
+- Aoycocr smart plugs that I
 [hacked](https://www.youtube.com/watch?v=O5GYh470m5k&t=8s) to run
-[Tasmota](https://tasmota.github.io/docs/) but Aoycocr updated their firmware
+[Tasmota](https://tasmota.github.io/docs/). Sadly, Aoycocr updated their firmware
 about 2 yrs ago so that this process no longer works.
-
-Note, again, these are just what I have, some of which I purchased years ago,
-and the collection evolves over time (not shown are things that didn't make the
-cut, were retired and replaced, etc.) as new or better products emerge, so there
-are no doubt better options in many cases.
 
 4. **DIY sensors**: I used a
 [Particle Photon](https://store.particle.io/products/photon) to create a
