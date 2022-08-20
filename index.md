@@ -10,11 +10,11 @@ well.]*
 
 ## If you are anxious to get started...
 
-You could skip the stuff below and head straight to the Home Assistant [Getting
-Started pages](https://www.home-assistant.io/getting-started/), which are
-fabulous.  You may also want to check out some of the getting started videos
-(selecting hardware, mistakes to avoid, etc.) at my favorite source of help for
-Home Assistant:
+You could skip the stuff below and head straight to the Home Assistant
+[Getting Started pages](https://www.home-assistant.io/getting-started/),
+which are fabulous.  You may also want to check out some of the getting started
+videos (selecting hardware, mistakes to avoid, etc.) at my favorite source of
+help for Home Assistant:
 [Everything Smart Home](https://www.youtube.com/c/EverythingSmartHome).
 
 ---
@@ -182,13 +182,20 @@ there.
 
 ## What exactly do I have (in case you are curious)
 
-1. **Hardware**:  Raspberry Pi4 with a 1TB SSD. I also have a [Coral TPU](https://coral.ai/products/accelerator), a [Zigbee USB stick](https://www.amazon.com/dresden-elektronik-ConBee-Universal-Gateway/dp/B07PZ7ZHG5) (combined gateway and radio, controlled via a HASS add-on and integration), and a [Z-Wave USB stick](https://www.amazon.com/Z-Wave-Stick-Assistant-HomeSeer-Software/dp/B07GNZ56BK/ref=sr_1_4?crid=2DD46HYRSA669&keywords=z-wave&qid=1660804098&s=electronics&sprefix=z-wave%2Celectronics%2C55&sr=1-4) (combined Gateway/radio, controlled via HASS integration).
+1. **Hardware**:  Raspberry Pi4 with a 1TB SSD. I also have a
+[Coral TPU](https://coral.ai/products/accelerator), a
+[Zigbee USB stick](https://www.amazon.com/dresden-elektronik-ConBee-Universal-Gateway/dp/B07PZ7ZHG5)
+(combined gateway and radio, controlled via a HASS add-on and integration), and
+a [Z-Wave USB stick](https://www.amazon.com/Z-Wave-Stick-Assistant-HomeSeer-Software/dp/B07GNZ56BK/ref=sr_1_4?crid=2DD46HYRSA669&keywords=z-wave&qid=1660804098&s=electronics&sprefix=z-wave%2Celectronics%2C55&sr=1-4)
+(combined Gateway/radio, controlled via HASS integration).
 
-2. **HA Install**: I run [Home Assistant Operating System](https://www.home-assistant.io/installation/raspberrypi).
+2. **HA Install**: I run
+[Home Assistant Operating System](https://www.home-assistant.io/installation/raspberrypi).
 
 3. **Commercial Systems**:  
 - [Hue lights](https://www.philips-hue.com/en-us) 
-- Samsung Smartthings ([moisture sensors](https://www.amazon.com/Aeotec-SmartThings-Battery-Powered-Compatible/dp/B095TR9NYR/ref=sr_1_4?crid=2GGGMCCWZAQNT&keywords=smartthings+water+leak+sensor&qid=1660831204&sprefix=smartthings+%2Caps%2C97&sr=8-4)). I was able to turn off the hub, reset these units, and add them to my HASS system via the Zigbee integration.
+- Samsung Smartthings ([moisture sensors](https://www.amazon.com/Aeotec-SmartThings-Battery-Powered-Compatible/dp/B095TR9NYR/ref=sr_1_4?crid=2GGGMCCWZAQNT&keywords=smartthings+water+leak+sensor&qid=1660831204&sprefix=smartthings+%2Caps%2C97&sr=8-4)).
+I was able to turn off the hub, reset these units, and add them to my HASS system via the Zigbee integration.
 - [Orbit B-Hive irrigation system](https://www.amazon.com/Orbit-57950-12-Station-Controller-Compatible/dp/B01D15HOTU/ref=sr_1_5?crid=GI5GJOT02AR6&keywords=b-hyve+orbit&qid=1660832013&sprefix=b-hive+orbit%2Caps%2C96&sr=8-5)
 - [TP-Link smart plugs](https://www.amazon.com/gp/product/B01KBFWW0O/ref=ppx_yo_dt_b_search_asin_title?ie=UTF8&psc=1)
 - [MyQ garage door controller](https://www.amazon.com/Smart-Garage-Opener-Chamberlain-myQ-G0401/dp/B08GD3D9YJ/ref=sr_1_1?crid=2B01WH1IK0Z5&keywords=myq&qid=1660832189&s=hi&sprefix=myq%2Ctools%2C113&sr=1-1) (works with most modern but *not all* openers) (Relies on MyQ cloud).
@@ -216,16 +223,14 @@ Frigate, Studio Code Server, Terminal & SSH, Z-Wave JS, and MQTT (which Frigate
 uses to communicate with HASS).
 
 6. **Cameras**:  For Frigate I have three cameras. One is a
-[Ubiquiti Unifi Protect G4-Bullet]
-(https://www.amazon.com/gp/product/B08JCTVQ88/ref=ppx_yo_dt_b_search_asin_title?ie=UTF8&psc=1)
+[Ubiquiti Unifi Protect G4-Bullet](https://www.amazon.com/gp/product/B08JCTVQ88/ref=ppx_yo_dt_b_search_asin_title?ie=UTF8&psc=1)
 PoE camera.  It's a really nice, solid, high-quality camera but pretty
 expensive.  Moreover it requires a proprietary (and expensive) Ubiquiti Network
 Video Recorder (NVR). Fortunately there is a third party compatible NVR package
 that runs on my Synology NAS. This requires fiddling with Docker installs of
 third party packages on the NAS system which is extra complexity and steps.  I
 recently bought two much less expensive
-[Amcrest Smarthome 1080p Wifi Outdoor Security Cameras]
-(https://www.amazon.com/gp/product/B07WK8FH3X/ref=ppx_yo_dt_b_asin_title_o02_s00?ie=UTF8&psc=1).
+[Amcrest Smarthome 1080p Wifi Outdoor Security Cameras](https://www.amazon.com/gp/product/B07WK8FH3X/ref=ppx_yo_dt_b_asin_title_o02_s00?ie=UTF8&psc=1).
 These don't require a separate NVR so are a snap to get running. 
 
 7. **About Networks**: You'll want to make sure your home wifi router can do DNS
@@ -252,8 +257,7 @@ to power the well pump that we use for irrigation.  This was easy to connect
 gateway/radio). I'm about to install one of the Amcrest wifi cameras and set
 Frigate to detect "bird" objects.  To avoid not-low-probability events that
 might damage the well pump, I have connected a
-[pressure sensor]
-(https://www.amazon.com/gp/product/B0748BHLQL/ref=ppx_yo_dt_b_asin_title_o04_s00?ie=UTF8&psc=1)
+[pressure sensor](https://www.amazon.com/gp/product/B0748BHLQL/ref=ppx_yo_dt_b_asin_title_o04_s00?ie=UTF8&psc=1)
 (that will screw into one of the ports of the well pump) to a Particle Photon in
 order to report the water pressure at the pump (will link to code rsn) letting
 HASS decide whether it's operating safely (so it can automatically turn it off
@@ -266,10 +270,8 @@ I'm also exploring [ESPHome](https://esphome.io/) which looks like a very nice
 way to create simple, very cheap, wifi-connected sensors for HASS.  For
 instance, a [Particle Photon](https://store.particle.io/products/photon) is
 about $20 and one can get
-[ESP devices with GPIO pins]
-(https://www.amazon.com/gp/product/B081PX9YFV/ref=ppx_yo_dt_b_asin_title_o03_s00?ie=UTF8&psc=1)
+[ESP devices with GPIO pins](https://www.amazon.com/gp/product/B081PX9YFV/ref=ppx_yo_dt_b_asin_title_o03_s00?ie=UTF8&psc=1)
 for about $3 each.  I'm building a set of these with
-[temperature sensors]
-(https://randomnerdtutorials.com/guide-for-ds18b20-temperature-sensor-with-arduino/)
+[temperature sensors](https://randomnerdtutorials.com/guide-for-ds18b20-temperature-sensor-with-arduino/)
 to evaluate the performance of our HVAC system throughout the home. 
 
