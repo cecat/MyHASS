@@ -15,6 +15,8 @@ You could skip the stuff below and head straight to the Home Assistant [Getting 
 
 There are lots of smart/automated home products, many of which interoperate, all of which have their own apps. Many can be aggregated through Amazon, Apple, or Google home devices, and pretty much *all* of them use cloud services, making your home rely on working Internet and spreading your data around the world.  You can also do pretty powerful things with services like IFTTT, but these are very simple things (one trigger, one action) so you can't do less simple (but still not complicated) things like "turn on the light for 10 minutes" (turn on light; wait 10 min; turn off light - 3 actions, 2 too many for IFTTT) much less more sophisticated things such as actions that have conditions (only do X from 12am to 5am). (I love IFTTT and used it a lot, but with HASS I don't need it)
 
+<img src="/media/Legacy1999.jpg" align="left" width="200px"/>
+<br clear="left"/>
 I started with DIY systems I built myself in about 1999. I created my first system using an old fashioned thermostat wired to a Radio Shack auto-dialer (and a couple of (big) 6v batteries in case of power outages), so if the power or heat went out in winter (dropping the temperature, triggering the thermostat), I'd get a call (this saved my pipes multiple times).  Multiple generations of DIY later I found myself accumulating many very nice (but independent) home automation systems.  Philips Hue lights (and a hub), Samsung Smartthings (and a hub), Amazon Blink cameras (and a hub), Aqara door sensors (and a hub), various smart outlets (no hub, or rather the hub is in China...), etc.  All of those hubs rely on Internet connectivity to commercial clouds. 
 
 I adopted HASS to (a) bring all of these systems together, and (b) move as much as possible away from reliance on Internet/cloud for my automations and data.
@@ -95,11 +97,3 @@ I'm working on a couple of things at the moment.  Having set up Frigate to take 
 
 I'm also exploring [ESPHome](https://esphome.io/) which looks like a very nice way to create simple, very cheap, wifi-connected sensors for HASS.  For instance, a [Particle Photon](https://store.particle.io/products/photon) is about $20 and one can get [ESP devices with GPIO pins](https://www.amazon.com/gp/product/B081PX9YFV/ref=ppx_yo_dt_b_asin_title_o03_s00?ie=UTF8&psc=1) for about $3 each.  I'm building a set of these with [temperature sensors](https://randomnerdtutorials.com/guide-for-ds18b20-temperature-sensor-with-arduino/) to evaluate the performance of our HVAC system throughout the home. 
 
-Testing some MD here (nothing to see here, sorry)
-<img src="media/Legacy1999.jpg" align="left" width="200px"/>
-some text floating around the image
-<br clear="left"/>
-Testing alt MD here (nothing to see here, sorry)
-<img src="/media/Legacy1999.jpg" align="left" width="200px"/>
-some text floating around the image
-<br clear="left"/>
