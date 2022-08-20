@@ -1,4 +1,4 @@
-# A Primer on Home Assistant (HASS)
+# A Primer on (my use of) Home Assistant (HASS)
 Charlie Catlett (August 2022)
 
 *[note- I am referencing specific products but I have no relationship with any of the companies, and will not make any money if you buy them.  All it means is that they work for me, but there are likely other options in many cases as well.]*
@@ -7,7 +7,7 @@ Charlie Catlett (August 2022)
 
 ## If you are anxious to get started...
 
-You could skip the stuff below and head straight to the Home Assistant [Getting Started pages](https://www.home-assistant.io/getting-started/), which is fabulous.  You may also want to check out some of the getting started tips (selecting hardware, mistakes to avoid, etc.) at my favorite source of help for Home Assistant - [Everything Smart Home](https://www.youtube.com/c/EverythingSmartHome).
+You could skip the stuff below and head straight to the Home Assistant [Getting Started pages](https://www.home-assistant.io/getting-started/), which are fabulous.  You may also want to check out some of the getting started tips (selecting hardware, mistakes to avoid, etc.) at my favorite source of help for Home Assistant - [Everything Smart Home](https://www.youtube.com/c/EverythingSmartHome).
 
 ---
 
