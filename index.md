@@ -58,25 +58,29 @@ I have a few important functions that I implement with HASS, which I would say
 fall into several categories.
 
 1. **Avoiding Unpleasant Events** (or at least getting an alert when they
-happen).  I have Samsung Smartthings moisture sensors located near the sump
+happen).  I have moisture sensors located near the sump
 pump well, next to the water heater, and under the kitchen sink.  I am
 immediately notified (lights turning on, text message) if moisture is detected.
 I have a (DIY) sensor to keep track of how often the sump pump runs (how worried
 I should be if it were to stop), how often the water heater runs, and when the
 HVAC system is running.  This gives me a feel for normal behavior, and on
 several occasions that has helped me anticipate problems and prevent them.
+I also have sensors on the garage doors, so I get notified if a garage door
+is open for >10 min, because it's heated and I don't want to heat the front
+yard in winter.
 
 2. **Safety**.  In some spaces, such as the garage, or back deck, I have lights
 automatically turn on when doors open or movement is detected (no fumbling with
-wall switches).  I use Aqara door sensors to detect when any of our exterior
-doors open, so I can set an alert if that happens when no one is home or in the
-dark of night.  I use Blink cameras just to be able to check on things (for
-instance, one is pointed at the sump pump so if it is running a lot I can check
-in on it (from anywhere).  I use several types of cameras along with a package
-("add on") called [Frigate](https://docs.frigate.video/) to detect when a human
-is seen in the front or back of the house (and depending on the time of day or
-whether we are at home) the system saves a 30s clip and I can have the system do
-nothing or trigger a sequence of actions.  
+wall switches).  I use sensors to detect when any of our exterior
+doors open, so I can get notified if that happens when no one is home or in the
+dark of night. Or I can set actions such as turning on lights when those
+doors open.  I use cameras just to be able to check on things whenever of from
+wherever I am.  One is pointed at the sump pump so if it is running a lot (see 1)
+I can check in on it (from anywhere).  I use several types of cameras along
+with a package ("add on") called [Frigate](https://docs.frigate.video/) to
+detect when a human is seen in the front or back of the house (and depending
+on the time of day or whether we are at home) the system saves a 30s clip
+and I can have the system do nothing or trigger a sequence of actions.  
 
 3. **Remote Control**.  From anywhere on the Internet I can check on things,
 turn lights on or off, make sure doors are closed, open or close the garage
@@ -87,9 +91,9 @@ but in HASS I have my own dashboard for the home.
 4. **Fun Stuff**.  I use Life360 with a family circle that HASS uses to keep
 track of how many of us are home (allowing me to have certain automated actions
 related to security when no one is home).  I have another circle of a half dozen
-co-workers and keep track of how many of us are at our lab.  At 4:30pm on
-weekdays HASS checks to see if 4 or more of us are there, and if so all of us
-get a text (and slack) message suggesting we go to the pub.
+friends and keep track of how many of us are at our lab at any given time.
+At 4:30pm on weekdays HASS checks to see if 4 or more of us are there, and
+if so we all get a text (and slack) message suggesting we go to the pub.
 
 ## What are a couple of things to get rolling?
 
