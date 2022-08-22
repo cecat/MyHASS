@@ -46,9 +46,9 @@ cameras (and a hub), Aqara door sensors (and a hub), various smart outlets (no
 hub, or rather the hub is in China...), etc.  All of those hubs rely on Internet
 connectivity to commercial clouds.  I adopted HASS to (a) bring all of these
 systems together, and (b) move as much as possible away from reliance on
-Internet/cloud for my automations and data.  (Photo shows the original install,
-not sure what happened to that thermostat.  The install date on the schematic is
-Jan 7, 1999.)
+Internet/cloud for my automations and data. 
+*(Photo shows the original install, not sure what happened to that thermostat.
+The install date on the schematic is Jan 7, 1999.)*
 
 <br clear="left"/>
 
