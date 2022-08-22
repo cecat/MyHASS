@@ -192,6 +192,9 @@ there.
 (combined gateway and radio, controlled via a HASS add-on and integration), and
 a [Z-Wave USB stick](https://www.amazon.com/Z-Wave-Stick-Assistant-HomeSeer-Software/dp/B07GNZ56BK/ref=sr_1_4?crid=2DD46HYRSA669&keywords=z-wave&qid=1660804098&s=electronics&sprefix=z-wave%2Celectronics%2C55&sr=1-4)
 (combined Gateway/radio, controlled via HASS integration).
+I ran on a 32GB microSD card for a few years but switched to an SSD because (a) Frigate filled it up
+while I wasn't looking and (b) I wanted to move to InfluxDB and Grafana for fancy graphing, etc.
+and this will have a lot more storage activity, shortening the life of the microSD card.
 
 2. **HA Install**: I run
 [Home Assistant Operating System](https://www.home-assistant.io/installation/raspberrypi).
