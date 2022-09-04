@@ -278,7 +278,7 @@ way to create simple, very cheap, wifi-connected sensors for HASS.  For
 instance, a [Particle Photon](https://store.particle.io/products/photon) is
 about $20 and one can get ESP devices with GPIO pins (e.g., the
 [D1_mini](https://www.amazon.com/gp/product/B081PX9YFV/ref=ppx_yo_dt_b_asin_title_o03_s00?ie=UTF8&psc=1)
-for about $3 each.  I'm building a set of these with
+for about $3 each).  I'm building a set of these with
 [DS18B20 temperature sensors](https://www.amazon.com/gp/product/B012C597T0/ref=ppx_yo_dt_b_asin_title_o04_s00?ie=UTF8&psc=1)
 to evaluate the performance of our HVAC system throughout the home. The nice
 waterproof sensors on 6' cables are about $2-3 each.  You'd be tempted, though,
