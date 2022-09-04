@@ -282,3 +282,4 @@ for about $3 each.  I'm building a set of these with
 [temperature sensors](https://randomnerdtutorials.com/guide-for-ds18b20-temperature-sensor-with-arduino/)
 to evaluate the performance of our HVAC system throughout the home. 
 
+<img src="/media/temps.jpg" align="center">
