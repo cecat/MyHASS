@@ -276,11 +276,18 @@ would still be hard on the pump).
 I'm also exploring [ESPHome](https://esphome.io/) which looks like a very nice
 way to create simple, very cheap, wifi-connected sensors for HASS.  For
 instance, a [Particle Photon](https://store.particle.io/products/photon) is
-about $20 and one can get
-[ESP devices with GPIO pins](https://www.amazon.com/gp/product/B081PX9YFV/ref=ppx_yo_dt_b_asin_title_o03_s00?ie=UTF8&psc=1)
+about $20 and one can get ESP devices with GPIO pins (e.g., the
+[D1_mini](https://www.amazon.com/gp/product/B081PX9YFV/ref=ppx_yo_dt_b_asin_title_o03_s00?ie=UTF8&psc=1)
 for about $3 each.  I'm building a set of these with
-[temperature sensors](https://randomnerdtutorials.com/guide-for-ds18b20-temperature-sensor-with-arduino/)
-to evaluate the performance of our HVAC system throughout the home. Below you
+[DS18B20 temperature sensors](https://www.amazon.com/gp/product/B012C597T0/ref=ppx_yo_dt_b_asin_title_o04_s00?ie=UTF8&psc=1)
+to evaluate the performance of our HVAC system throughout the home. The nice
+waterproof sensors on 6' cables are about $2-3 each.  You'd be tempted, though,
+to just solder one of the tiny (and even cheaper) 
+[IC form factor DS18B20 sensors](https://www.amazon.com/Diymore-DS18B20-Digital-Thermometer-Temperature/dp/B01IVN3X6K/ref=sr_1_3?crid=3MF0PRS9NQ69X&keywords=ds18b20&qid=1662260376&sprefix=ds18b20%2Caps%2C119&sr=8-3)
+to the ESP board.  This would be
+very elegant (no wires, etc.) but you'd be measuring the head coming off of the
+ESP board rather than the ambient room temperature, so go for the ones on 
+cables.  Below you
 can see a grafana dashboard showing the temps in 5 rooms (the very flat orange
 line is the temperature reading of the thermostat) and outside temperature 
 (purple line).
