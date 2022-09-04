@@ -290,6 +290,7 @@ ESP board rather than the ambient room temperature, so go for the ones on
 cables.  Below you
 can see a grafana dashboard showing the temps in 5 rooms (the very flat orange
 line is the temperature reading of the thermostat) and outside temperature 
-(purple line).
+(purple line). The sensors report every 60x and I'm graphing the time simple moving
+average (built-in HASS filter) with a 10min window.
 
 <img src="/media/temps.jpg" align="center">
