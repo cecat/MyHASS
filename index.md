@@ -280,6 +280,9 @@ about $20 and one can get
 [ESP devices with GPIO pins](https://www.amazon.com/gp/product/B081PX9YFV/ref=ppx_yo_dt_b_asin_title_o03_s00?ie=UTF8&psc=1)
 for about $3 each.  I'm building a set of these with
 [temperature sensors](https://randomnerdtutorials.com/guide-for-ds18b20-temperature-sensor-with-arduino/)
-to evaluate the performance of our HVAC system throughout the home. 
+to evaluate the performance of our HVAC system throughout the home. Below you
+can see a grafana dashboard showing the temps in 5 rooms (the very flat orange
+line is the temperature reading of the thermostat) and outside temperature 
+(purple line).
 
 <img src="/media/temps.jpg" align="center">
