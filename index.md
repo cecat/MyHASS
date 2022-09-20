@@ -261,7 +261,7 @@ Z-Wave connected 25A
 [outdoor smart outlet](https://www.getzooz.com/zooz-zen15-power-switch/)
 to power the well pump that we use for irrigation.  This was easy to connect
 (no hub required) to HASS via the Z-Wave integration (requires a Z-Wave USB
-gateway/radio). I'm about to install one of the Amcrest wifi cameras and set
+gateway/radio). I installed one of the Amcrest wifi cameras and set
 Frigate to detect "bird" objects.  To avoid not-low-probability events that
 might damage the well pump, I have connected a
 [pressure sensor](https://www.amazon.com/gp/product/B0748BHLQL/ref=ppx_yo_dt_b_asin_title_o04_s00?ie=UTF8&psc=1)
@@ -272,6 +272,14 @@ if not).  In normal circumstances the pump runs at about 40psi, but if it loses
 its prime it will sputter down to 20psi or so, and if someone were to turn off
 all of the spigots it would shoot up to 90psi (though I have a relief valve, it
 would still be hard on the pump).
+I'm happy to say that the system detects geese reasonably well and turning on the
+sprinkler causes  the geese to immediately decamp (at around 7s into
+[this clip;](https://www.dropbox.com/s/szf8qru47ypq84e/clip_goosecam_1663267722.24819-1663267741.046731.mp4?dl=0)
+the sprinkler is on the dock and not easy to see but the effect on the geese
+is obvious).  But the camera is still pretty
+far from the lakefront so it does not detect them until they move up closer to
+the house (and thus have been there for a while).  Next step will be to
+move the camera down to the dock.
 
 I'm also exploring [ESPHome](https://esphome.io/) which looks like a very nice
 way to create simple, very cheap, wifi-connected sensors for HASS.  For
