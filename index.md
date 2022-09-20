@@ -286,7 +286,7 @@ way to create simple, very cheap, wifi-connected sensors for HASS.  For
 instance, a [Particle Photon](https://store.particle.io/products/photon) is
 about $20 and one can get ESP devices with GPIO pins (e.g., the
 [D1_mini](https://www.amazon.com/gp/product/B081PX9YFV/ref=ppx_yo_dt_b_asin_title_o03_s00?ie=UTF8&psc=1)
-for about $3 each).  I'm building a set of these with
+for about $3 each).  I built a set of these with
 [DS18B20 temperature sensors](https://www.amazon.com/gp/product/B012C597T0/ref=ppx_yo_dt_b_asin_title_o04_s00?ie=UTF8&psc=1)
 to evaluate the performance of our HVAC system throughout the home. The nice
 waterproof sensors on 6' cables are about $2-3 each.  You'd be tempted, though,
@@ -296,9 +296,10 @@ to the ESP board.  This would be
 very elegant (no wires, etc.) but you'd be measuring the head coming off of the
 ESP board rather than the ambient room temperature, so go for the ones on 
 cables.  Below you
-can see a grafana dashboard showing the temps in 5 rooms (the very flat orange
+can see a grafana dashboard showing the temps in 8 rooms and a shaded outside location.
+The relatively flat green
 line is the temperature reading of the thermostat) and outside temperature 
 (purple line). The sensors report every 60x and I'm graphing the time simple moving
 average (built-in HASS filter) with a 10min window.
 
-<img src="/media/temps.jpg" align="center">
+<img src="/media/temps.png" align="center">
