@@ -197,7 +197,7 @@ there.
 
 ## What exactly do I have (in case you are curious)
 
-1. **Hardware**:
+### Hardware ###
 - Mini-PC (generic, Intel Celeron) with a 1TB SSD. 
 - [Coral TPU](https://coral.ai/products/accelerator)
 - [Zigbee USB stick](https://www.amazon.com/dresden-elektronik-ConBee-Universal-Gateway/dp/B07PZ7ZHG5)
@@ -210,10 +210,10 @@ I ran on a Pi4 with a 32GB microSD card for a few years but switched to an SSD b
 to InfluxDB and Grafana for fancy graphing, etc.
 and this will have a lot more storage activity, shortening the life of the microSD card.
 
-2. **HA Install**: I run
-[Home Assistant Operating System](https://www.home-assistant.io/installation/generic-x86-64).
+### Home Assistant Install ###
+I run [Home Assistant Operating System](https://www.home-assistant.io/installation/generic-x86-64).
 
-3. **Commercial Systems**:  
+### Commercial Components / Systems ###
 - [Hue lights](https://www.philips-hue.com/en-us) 
 - Samsung Smartthings ([moisture sensors](https://www.amazon.com/Aeotec-SmartThings-Battery-Powered-Compatible/dp/B095TR9NYR/ref=sr_1_4?crid=2GGGMCCWZAQNT&keywords=smartthings+water+leak+sensor&qid=1660831204&sprefix=smartthings+%2Caps%2C97&sr=8-4)).
 I was able to turn off the hub, reset these units, and add them to my HASS system via the Zigbee integration.
@@ -229,23 +229,31 @@ modern wiring with ground in switch boxes).
 [Tasmota](https://tasmota.github.io/docs/). Sadly, Aoycocr updated their firmware
 about 2 years ago so that this process no longer works.
 
-4. **DIY sensors**: I used a
-[Particle Photon](https://store.particle.io/products/photon) to create a
+### DIY sensors ###
+- [Particle Photon](https://store.particle.io/products/photon) to create a
 [utilities monitor](https://github.com/cecat/UtilityWatchMQTT) to track the duty
 cycles and activities of my sump pump, water heater, and HVAC system.  This
 system checks that state of these utilities every few seconds and reports to
-HASS using MQTT. For the home 2h away I used a
+HASS using MQTT.
+- For the home 2h away I use a
 [Particle Electron](https://docs.particle.io/electron/) (celular with
 a backup LiPo battery, so does not
 rely on power/Internet and thus can report such outages) to create a
 [crawlspace temperature monitor](https://github.com/cecat/Lake-Watch) so that I
 am alerted whenever the crawspace drops near to freezing temperatures.  
 
-5. **HASS Add-ons**: InfluxDB database;, Grafana for fancy time series graphs,
-Frigate, Studio Code Server, Terminal & SSH, Z-Wave JS, and MQTT (which Frigate
-uses to communicate with HASS).
+### HASS [Add-ons](https://www.home-assistant.io/addons/)  ###
+- InfluxDB database
+- Grafana for fancy time series graphs
+- Studio Code Server
+- SSH & Web Terminal
+- Z-Wave JS
+- Mosquitto broker (MQTT) 
+- ESPHome
+- Frigate (via HACS)
 
-6. **Cameras**:  For Frigate I have three cameras. One is a
+### Camera ###
+For Frigate I have three cameras. One is a
 [Ubiquiti Unifi Protect G4-Bullet](https://www.amazon.com/gp/product/B08JCTVQ88/ref=ppx_yo_dt_b_search_asin_title?ie=UTF8&psc=1)
 PoE camera.  It's a really nice, solid, high-quality camera but pretty
 expensive.  Moreover it requires a proprietary (and expensive) Ubiquiti Network
@@ -256,16 +264,17 @@ recently bought two much less expensive
 [Amcrest Smarthome 1080p Wifi Outdoor Security Cameras](https://www.amazon.com/gp/product/B07WK8FH3X/ref=ppx_yo_dt_b_asin_title_o02_s00?ie=UTF8&psc=1).
 These don't require a separate NVR so are a snap to get running. 
 
-7. **About Networks**: You'll want to make sure your home wifi router can do DNS
+### About Networks ###
+You'll want to make sure your home wifi router can do DNS
 reservations so that your server and cameras always get the same IP address.
 This is important for configuring the cameras (via their RTSP URLs) as well as
 for MQTT so devices can find the server.  If you plan to access HASS remotely
 (it has a very nice smartphone app) you'll also want to forward port 8123 for
-HASS and 1883 for MQTT.  For $5/mo though you can subscribe to
+HASS and 1883 for MQTT.  For $6/mo though you can subscribe to
 [Nabucasa](https://nabucasa.com/), a company run by Home Assistant founders that
 provides remote access without opening ports on your router.
 
-## Current Projects
+## Current Projects and Updates
 
 I'm working on a couple of things at the moment.  Having set up Frigate to take
 actions when certain objects (e.g., humans) are detected during certain time
