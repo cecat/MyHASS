@@ -58,16 +58,26 @@ I have a few important functions that I implement with HASS, which I would say
 fall into several categories.
 
 1. **Avoiding Unpleasant Events** (or at least getting an alert when they
-happen).  I have moisture sensors located near the sump
+happen, or might happen).  I have moisture sensors located near the sump
 pump well, next to the water heater, and under the kitchen sink.  I am
 immediately notified (lights turning on, text message) if moisture is detected.
-I have a (DIY) sensor to keep track of how often the sump pump runs (how worried
+I built a
+[sensor package](https://github.com/cecat/UtilityWatchMQTT)
+that keeps track of how often the sump pump runs (how worried
 I should be if it were to stop), how often the water heater runs, and when the
 HVAC system is running.  This gives me a feel for normal behavior, and on
 several occasions that has helped me anticipate problems and prevent them.
+Similarly, for a house that is 2h away I built a
+[sensor package](https://github.com/cecat/Lake-Watch)
+that every 5 minutes
+sends the temperature of the crawlspace and whether the power is on.
+(it has a battery and cellular connectivity so can operate for a dozen
+hours if the power goes out). This gives me ample warning about power or
+heat outages before pipes start to freeze.
+Both of these devices talk to Home Assistant via MQTT.
 I also have sensors on the garage doors, so I get notified if a garage door
 is open for >10 min, because it's heated and I don't want to heat the front
-yard in winter.
+yard in winter. (these talk to Home Assistant via Zigbee)
 
 2. **Safety**.  In some spaces, such as the garage, or back deck, I have lights
 automatically turn on when doors open or movement is detected (no fumbling with
@@ -78,9 +88,9 @@ doors open.  I use cameras just to be able to check on things whenever of from
 wherever I am.  One is pointed at the sump pump so if it is running a lot (see 1)
 I can check in on it (from anywhere).  I use several types of cameras along
 with a package ("add on") called [Frigate](https://docs.frigate.video/) to
-detect when a human is seen in the front or back of the house (and depending
-on the time of day or whether we are at home) the system saves a 30s clip
-and I can have the system do nothing or trigger a sequence of actions.  
+detect when a human is seen in the front or back of the house
+Frigate saves a 30s clip and I can have the system do nothing or trigger a
+sequence of actions.  (depending on the time of day or whether anyone is at home) 
 
 3. **Remote Control**.  From anywhere on the Internet I can check on things,
 turn lights on or off, make sure doors are closed, open or close the garage
@@ -101,7 +111,8 @@ My suggestion is to start with the systems you have (if any), and integrate them
 with HASS.  Doing so in the simplest fashion (without ditching their hubs) won't
 affect other things you already might do such as through your
 Amazon/Apple/Google assistants, IFTTT, or the associated smartphone apps.  But
-to get the best value from HASS you'll want to get rid of the hubs and have them
+to get the best value from HASS you'll want to get rid of the hubs (where
+possible) and have them
 talk directly to HASS (depending on the system, this may be a simple reset or
 may require new firmware, see my systems description below). You can check out
 [what "integrations" are available](https://www.home-assistant.io/integrations/)
@@ -128,7 +139,7 @@ Frigate.
 
 ### Hardware.
 
-1. **Your server**.  You will want at minimum a Raspberry Pi 4, but you might
+1. **Your server**.  You will want at minimum a Raspberry Pi4, but you might
 also consider more powerful platforms such as a Nuc. The HASS installation pages
 show other platforms that are supported.
 
@@ -142,7 +153,7 @@ you should buy an SSD (go for 1 TB at least).
 of the beefier servers or get a Coral TPU (USB device that plugs into your
 server).  A Pi3 is probably fine if all you are doing is controlling lights and
 monitoring sensors, but Frigate will bring it to its knees (it will be
-unresponsive).  A Pi4 can barely keep up with 1 camera, using 80% of its CPU to
+unresponsive).  A Pi4 can barely keep up with 1 camera, using 70-80% of its CPU to
 do so and giving you sluggish performance interacting with the system.
 
 *NOTE: Unfortunately as of August 2022 it is nearly impossible to find either a
@@ -195,9 +206,13 @@ a [Z-Wave USB stick](https://www.amazon.com/Z-Wave-Stick-Assistant-HomeSeer-Soft
 I ran on a 32GB microSD card for a few years but switched to an SSD because (a) Frigate filled it up
 while I wasn't looking and (b) I wanted to move to InfluxDB and Grafana for fancy graphing, etc.
 and this will have a lot more storage activity, shortening the life of the microSD card.
+Update- I recently switched from the Pi4 to a mini-PC (Intel Celeron) for both performance and
+because I was also having trouble with the Pi4 being able to detect the SSD.  Moreover, the SSD
+connects to the mini-PC has direct M.2 and SATA SSD connectors whereas the connection to the Pi4
+is via USB.
 
 2. **HA Install**: I run
-[Home Assistant Operating System](https://www.home-assistant.io/installation/raspberrypi).
+[Home Assistant Operating System](https://www.home-assistant.io/installation/generic-x86-64).
 
 3. **Commercial Systems**:  
 - [Hue lights](https://www.philips-hue.com/en-us) 
@@ -207,20 +222,22 @@ I was able to turn off the hub, reset these units, and add them to my HASS syste
 - [TP-Link smart plugs](https://www.amazon.com/gp/product/B01KBFWW0O/ref=ppx_yo_dt_b_search_asin_title?ie=UTF8&psc=1)
 - [MyQ garage door controller](https://www.amazon.com/Smart-Garage-Opener-Chamberlain-myQ-G0401/dp/B08GD3D9YJ/ref=sr_1_1?crid=2B01WH1IK0Z5&keywords=myq&qid=1660832189&s=hi&sprefix=myq%2Ctools%2C113&sr=1-1) (works with most modern but *not all* openers) (Relies on MyQ cloud).
 - [Aqara door sensors](https://www.amazon.com/Aqara-MCCGQ11LM-Window-Sensor-White/dp/B07D37VDM3/ref=sr_1_4?crid=Y9IKHD916DYA&keywords=aqara&qid=1660832246&s=hi&sprefix=aqara%2Ctools%2C90&sr=1-4) (all exterior). I was able to turn off the hub, reset these units, and add them to my HASS system via the Zigbee integration.
-- [Lutron Caseta switches](https://www.amazon.com/s?k=lutron+caseta&i=tools&crid=3BAI2YG29DFSV&sprefix=lutron%2Ctools%2C79&ref=nb_sb_ss_ts-doa-p_2_6) (I have not explored whether I can ditch the hub) Make sure you have relatively  modern wiring with ground in switch boxes).
-(Uses a hub but does not need cloud/internet.
+- [Lutron Caseta switches](https://www.amazon.com/s?k=lutron+caseta&i=tools&crid=3BAI2YG29DFSV&sprefix=lutron%2Ctools%2C79&ref=nb_sb_ss_ts-doa-p_2_6)
+(I have not explored whether I can ditch the hub) Make sure you have relatively
+modern wiring with ground in switch boxes).
 - Aoycocr smart plugs that I
 [hacked](https://www.youtube.com/watch?v=O5GYh470m5k&t=8s) to run
 [Tasmota](https://tasmota.github.io/docs/). Sadly, Aoycocr updated their firmware
-about 2 yrs ago so that this process no longer works.
+about 2 years ago so that this process no longer works.
 
 4. **DIY sensors**: I used a
 [Particle Photon](https://store.particle.io/products/photon) to create a
 [utilities monitor](https://github.com/cecat/UtilityWatchMQTT) to track the duty
 cycles and activities of my sump pump, water heater, and HVAC system.  This
 system checks that state of these utilities every few seconds and reports to
-HASS using MQTT. For a home 2h away I used a
-[Particle Electron](https://docs.particle.io/electron/) (celular, so does not
+HASS using MQTT. For the home 2h away I used a
+[Particle Electron](https://docs.particle.io/electron/) (celular with
+a backup LiPo battery, so does not
 rely on power/Internet and thus can report such outages) to create a
 [crawlspace temperature monitor](https://github.com/cecat/Lake-Watch) so that I
 am alerted whenever the crawspace drops near to freezing temperatures.  
@@ -281,7 +298,7 @@ far from the lakefront so it does not detect them until they move up closer to
 the house (and thus have been there for a while).  Next step will be to
 move the camera down to the dock.
 
-I'm also exploring [ESPHome](https://esphome.io/) which is a very nice
+I'm also now using [ESPHome](https://esphome.io/) which is a very nice
 way to create simple, very cheap, wifi-connected sensors for HASS.  For
 instance, a [Particle Photon](https://store.particle.io/products/photon) is
 about $20 and one can get ESP devices with GPIO pins (e.g., the
@@ -293,13 +310,13 @@ waterproof sensors on 6' cables are about $2-3 each.  You'd be tempted, though,
 to just solder one of the tiny (and even cheaper) 
 [IC form factor DS18B20 sensors](https://www.amazon.com/Diymore-DS18B20-Digital-Thermometer-Temperature/dp/B01IVN3X6K/ref=sr_1_3?crid=3MF0PRS9NQ69X&keywords=ds18b20&qid=1662260376&sprefix=ds18b20%2Caps%2C119&sr=8-3)
 to the ESP board.  This would be
-very elegant (no wires, etc.) but you'd be measuring the head coming off of the
+very elegant (no wires, etc.) but you'd be measuring the heat coming off of the
 ESP board rather than the ambient room temperature, so go for the ones on 
 cables.  Below you
 can see a grafana dashboard showing the temps in 8 rooms and a shaded outside location.
 The relatively flat green
 line is the temperature reading of the thermostat) and outside temperature 
-(purple line). The sensors report every 60x and I'm graphing the time simple moving
+is the purple line. The sensors report every ~60s and I'm graphing the time simple moving
 average (built-in HASS filter) with a 10min window.
 
 <img src="/media/temps.png" align="center">
