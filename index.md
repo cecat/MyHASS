@@ -225,7 +225,7 @@ I was able to turn off the hub, reset these units, and add them to my HASS syste
 (I have not explored whether I can ditch the hub) Make sure you have relatively
 modern wiring with ground in switch boxes).
 - Aoycocr smart plugs that I
-[hacked](https://www.youtube.com/watch?v=O5GYh470m5k&t=8s) to run
+[hacked](https://www.youtube.com/watch?v=dt5-iZc4_qU) to run
 [Tasmota](https://tasmota.github.io/docs/). Sadly, Aoycocr updated their firmware
 about 2 years ago so that this process no longer works.
 
