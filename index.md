@@ -41,7 +41,7 @@ batteries in case of power outages), so if the power and/or heat went out in
 winter (dropping the temperature, triggering the thermostat), I'd get a call
 (this saved my pipes multiple times).  Multiple generations of DIY later I found
 myself accumulating many very nice (but independent) home automation systems.
-Philips Hue lights (and a hub), Samsung Smartthings (and a hub), Amazon Blink
+Philips Hue lights and dimmer switches (and a hub), Samsung Smartthings (and a hub), Amazon Blink
 cameras (and a hub), Aqara door sensors (and a hub), various smart outlets (no
 hub, or rather the hub is in China...), etc.  All of those hubs rely on Internet
 connectivity to commercial clouds.  I adopted HASS to (a) bring all of these
@@ -214,21 +214,21 @@ and this will have a lot more storage activity, shortening the life of the micro
 I run [Home Assistant Operating System](https://www.home-assistant.io/installation/generic-x86-64).
 
 ### Commercial Components / Systems ###
-- [Hue lights](https://www.philips-hue.com/en-us) 
+- [Hue lights and dimmer switches](https://www.philips-hue.com/en-us) 
 - Samsung Smartthings [moisture sensors](https://www.amazon.com/Aeotec-SmartThings-Battery-Powered-Compatible/dp/B095TR9NYR/ref=sr_1_4?crid=2GGGMCCWZAQNT&keywords=smartthings+water+leak+sensor&qid=1660831204&sprefix=smartthings+%2Caps%2C97&sr=8-4)
 and
 [door/window multi-sensors](https://www.amazon.com/Samsung-SmartThings-Multipurpose-Sensor-GP-U999SJVLAAA/dp/B07F956F3B).
-I was able to turn off the hub, reset these units, and add them to my HASS system via the Zigbee integration.
+I was able to turn off the hub, reset these units, and add them to my HASS system via the Zigbee integration (and the Zigbee USB stick, see Hardware).
 - [Orbit B-Hive irrigation system](https://www.amazon.com/Orbit-57950-12-Station-Controller-Compatible/dp/B01D15HOTU/ref=sr_1_5?crid=GI5GJOT02AR6&keywords=b-hyve+orbit&qid=1660832013&sprefix=b-hive+orbit%2Caps%2C96&sr=8-5)
 - [TP-Link smart plugs](https://www.amazon.com/gp/product/B01KBFWW0O/ref=ppx_yo_dt_b_search_asin_title?ie=UTF8&psc=1)
 - [WiOn Outdoor Wifi Smart Plugs](https://www.amazon.com/50049-Outdoor-Wireless-Grounded-Outlets/dp/B00ZYLQZEK).
 - [Zooz Z-Wave](https://www.amazon.com/Z-Wave-Power-Switch-ZEN15-Humidifiers/dp/B07578W7KY)
-outdoor smart plugs.
+outdoor smart plugs. (requires the Z-Wave USB stick, see Hardware)
 - [MyQ garage door controller](https://www.amazon.com/Smart-Garage-Opener-Chamberlain-myQ-G0401/dp/B08GD3D9YJ/ref=sr_1_1?crid=2B01WH1IK0Z5&keywords=myq&qid=1660832189&s=hi&sprefix=myq%2Ctools%2C113&sr=1-1) (works with most modern but *not all* openers) (Relies on MyQ cloud).
 - [Aqara door sensors](https://www.amazon.com/Aqara-MCCGQ11LM-Window-Sensor-White/dp/B07D37VDM3/ref=sr_1_4?crid=Y9IKHD916DYA&keywords=aqara&qid=1660832246&s=hi&sprefix=aqara%2Ctools%2C90&sr=1-4) (all exterior). I was able to turn off the hub, reset these units, and add them to my HASS system via the Zigbee integration.
 - [Lutron Caseta switches](https://www.amazon.com/s?k=lutron+caseta&i=tools&crid=3BAI2YG29DFSV&sprefix=lutron%2Ctools%2C79&ref=nb_sb_ss_ts-doa-p_2_6)
 (I have not explored whether I can ditch the hub) Make sure you have relatively
-modern wiring with ground in switch boxes).
+modern wiring with ground in switch boxes, but [these are pretty cool](https://www.amazon.com/gp/product/B07Z6RFQ35/ref=ppx_yo_dt_b_search_asin_title) if you don't want to mess with wiring at all!
 - [Aoycocr smart plugs](https://www.amazon.com/dp/B07N1JPPXK) that I
 [hacked](https://www.youtube.com/watch?v=dt5-iZc4_qU) to run
 [Tasmota](https://tasmota.github.io/docs/). Sadly, Aoycocr updated their firmware
