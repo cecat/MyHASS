@@ -215,7 +215,9 @@ I run [Home Assistant Operating System](https://www.home-assistant.io/installati
 
 ### Commercial Components / Systems ###
 - [Hue lights](https://www.philips-hue.com/en-us) 
-- Samsung Smartthings ([moisture sensors](https://www.amazon.com/Aeotec-SmartThings-Battery-Powered-Compatible/dp/B095TR9NYR/ref=sr_1_4?crid=2GGGMCCWZAQNT&keywords=smartthings+water+leak+sensor&qid=1660831204&sprefix=smartthings+%2Caps%2C97&sr=8-4)).
+- Samsung Smartthings ([moisture sensors](https://www.amazon.com/Aeotec-SmartThings-Battery-Powered-Compatible/dp/B095TR9NYR/ref=sr_1_4?crid=2GGGMCCWZAQNT&keywords=smartthings+water+leak+sensor&qid=1660831204&sprefix=smartthings+%2Caps%2C97&sr=8-4))
+and
+[door/window multi-sensors](https://www.amazon.com/Samsung-SmartThings-Multipurpose-Sensor-GP-U999SJVLAAA/dp/B07F956F3B).
 I was able to turn off the hub, reset these units, and add them to my HASS system via the Zigbee integration.
 - [Orbit B-Hive irrigation system](https://www.amazon.com/Orbit-57950-12-Station-Controller-Compatible/dp/B01D15HOTU/ref=sr_1_5?crid=GI5GJOT02AR6&keywords=b-hyve+orbit&qid=1660832013&sprefix=b-hive+orbit%2Caps%2C96&sr=8-5)
 - [TP-Link smart plugs](https://www.amazon.com/gp/product/B01KBFWW0O/ref=ppx_yo_dt_b_search_asin_title?ie=UTF8&psc=1)
@@ -228,6 +230,10 @@ modern wiring with ground in switch boxes).
 [hacked](https://www.youtube.com/watch?v=dt5-iZc4_qU) to run
 [Tasmota](https://tasmota.github.io/docs/). Sadly, Aoycocr updated their firmware
 about 2 years ago so that this process no longer works.
+- IKEA [motion sensors](https://www.ikea.com/ca/en/p/tradfri-wireless-motion-sensor-smart-white-60377655/)
+and Zigbee 
+[signal repeaters](https://community.home-assistant.io/t/ikea-zigbee-signal-repeater/134350)
+(which they don't seem to sell any more).
 
 ### DIY sensors ###
 - [Particle Photon](https://store.particle.io/products/photon) to create a
