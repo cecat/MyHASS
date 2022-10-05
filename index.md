@@ -229,7 +229,7 @@ outdoor smart plugs.
 - [Lutron Caseta switches](https://www.amazon.com/s?k=lutron+caseta&i=tools&crid=3BAI2YG29DFSV&sprefix=lutron%2Ctools%2C79&ref=nb_sb_ss_ts-doa-p_2_6)
 (I have not explored whether I can ditch the hub) Make sure you have relatively
 modern wiring with ground in switch boxes).
-- Aoycocr smart plugs that I
+- [Aoycocr smart plugs](https://www.amazon.com/dp/B07N1JPPXK) that I
 [hacked](https://www.youtube.com/watch?v=dt5-iZc4_qU) to run
 [Tasmota](https://tasmota.github.io/docs/). Sadly, Aoycocr updated their firmware
 about 2 years ago so that this process no longer works.
