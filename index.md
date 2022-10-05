@@ -215,7 +215,7 @@ I run [Home Assistant Operating System](https://www.home-assistant.io/installati
 
 ### Commercial Components / Systems ###
 - [Hue lights](https://www.philips-hue.com/en-us) 
-- Samsung Smartthings ([moisture sensors](https://www.amazon.com/Aeotec-SmartThings-Battery-Powered-Compatible/dp/B095TR9NYR/ref=sr_1_4?crid=2GGGMCCWZAQNT&keywords=smartthings+water+leak+sensor&qid=1660831204&sprefix=smartthings+%2Caps%2C97&sr=8-4))
+- Samsung Smartthings [moisture sensors](https://www.amazon.com/Aeotec-SmartThings-Battery-Powered-Compatible/dp/B095TR9NYR/ref=sr_1_4?crid=2GGGMCCWZAQNT&keywords=smartthings+water+leak+sensor&qid=1660831204&sprefix=smartthings+%2Caps%2C97&sr=8-4)
 and
 [door/window multi-sensors](https://www.amazon.com/Samsung-SmartThings-Multipurpose-Sensor-GP-U999SJVLAAA/dp/B07F956F3B).
 I was able to turn off the hub, reset these units, and add them to my HASS system via the Zigbee integration.
