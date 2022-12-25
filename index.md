@@ -1,8 +1,9 @@
 # Home Automation Adventures
-Charlie Catlett (August 2022)
+CeC
 
 
-## Satisfying Graph (December 2022)
+## Satisfying Graph
+(December 2022)
 It is great to be able to see the results of fiddling with dampers rather than making
 changes and then asking humans to tell you if the temperature in a particular
 room is "better."  Yesterday (12/24) at about 11am I made changes to fix one
@@ -13,7 +14,8 @@ which it joins the other rooms in oscillating within 2-3 degrees around the ther
 
 <img src="/media/tempsRichBR.png" align="center">
 
-## Initial setup (September 2022)
+## Initial setup
+(September 2022)
 
 I'm also now using [ESPHome](https://esphome.io/) which is a very nice
 way to create simple, very cheap, wifi-connected sensors for HASS.  For
@@ -39,7 +41,8 @@ average (built-in HASS filter) with a 10min window.
 <img src="/media/temps.png" align="center">
 
 
-## Geese Dispersal (August 2022)
+## Geese Dispersal
+(August 2022)
 
 Having set up Frigate in HASS to take
 actions when certain objects (e.g., humans) are detected during certain time
@@ -71,7 +74,9 @@ far from the lakefront so it does not detect them until they move up closer to
 the house (and thus have been there for a while).  Next step will be to
 move the camera down to the dock.
 
-# A Primer on Home Assistant (HASS)  (August 2022) (Original post)
+# A Primer on Home Assistant (HASS)
+(August 2022) (Original post)
+Charlie Catlett
 
 
 *[Note- I reference specific products below but I have no relationship with any
