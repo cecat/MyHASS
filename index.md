@@ -4,7 +4,12 @@ Charlie Catlett (August 2022)
 
 ## Satisfying Graph (December 2022)
 It is great to be able to see the results of fiddling with dampers rather than making
-changes and then asking humans to tell you if the temperature in a particular room is "better."  Yesterday I made changes to fix one bedroom that was running hot.  It had immediate effect!
+changes and then asking humans to tell you if the temperature in a particular
+room is "better."  Yesterday (12/24) at about 11am I made changes to fix one
+bedroom (the yellow line) that was running hot.  It had immediate effect!
+You can see the room had been running about 5 degrees (sometimes more)
+hotter than the thermostat setting (green line) until the change, after
+which it joins the other rooms in oscillating within 2-3 degrees around the thermostat temperature.
 
 <img src="/media/tempsRichBR.png" align="center">
 
