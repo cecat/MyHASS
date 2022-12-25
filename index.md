@@ -1,5 +1,72 @@
-# A Primer on Home Assistant (HASS)
+#Home Automation Adventures
 Charlie Catlett (August 2022)
+
+
+# Satisfying Graph (December 2022)
+It is great to be able to see the results of fiddling with dampers rather than making
+changes and then asking humans to tell you if the temperature in a particular room is "better."  Yesterday I made changes to fix one bedroom that was running hot.  It had immediate effect!
+
+<img src="/media/tempsRichBR.png align="center">
+
+# Initial setup (September 2022)
+I'm also now using [ESPHome](https://esphome.io/) which is a very nice
+way to create simple, very cheap, wifi-connected sensors for HASS.  For
+instance, a [Particle Photon](https://store.particle.io/products/photon) is
+about $20 and one can get ESP devices with GPIO pins (e.g., the
+[D1_mini](https://www.amazon.com/gp/product/B081PX9YFV/ref=ppx_yo_dt_b_asin_title_o03_s00?ie=UTF8&psc=1)
+for about $3 each).  I built a set of these with
+[DS18B20 temperature sensors](https://www.amazon.com/gp/product/B012C597T0/ref=ppx_yo_dt_b_asin_title_o04_s00?ie=UTF8&psc=1)
+to evaluate the performance of our HVAC system throughout the home. The nice
+waterproof sensors on 6' cables are about $2-3 each.  You'd be tempted, though,
+to just solder one of the tiny (and even cheaper) 
+[IC form factor DS18B20 sensors](https://www.amazon.com/Diymore-DS18B20-Digital-Thermometer-Temperature/dp/B01IVN3X6K/ref=sr_1_3?crid=3MF0PRS9NQ69X&keywords=ds18b20&qid=1662260376&sprefix=ds18b20%2Caps%2C119&sr=8-3)
+to the ESP board.  This would be
+very elegant (no wires, etc.) but you'd be measuring the heat coming off of the
+ESP board rather than the ambient room temperature, so go for the ones on 
+cables.  Below you
+can see a grafana dashboard showing the temps in 8 rooms and a shaded outside location.
+The relatively flat green
+line is the temperature reading of the thermostat) and outside temperature 
+is the purple line. The sensors report every ~60s and I'm graphing the time simple moving
+average (built-in HASS filter) with a 10min window.
+
+<img src="/media/temps.png" align="center">
+
+
+## Geese Dispersal
+
+Having set up Frigate in HASS to take
+actions when certain objects (e.g., humans) are detected during certain time
+periods (including sending a picture of the person on my Apple watch), I 
+am working on a way to gently suggest to geese that they not congregate
+on our lawn, where they leave nasty messes behind.
+I have a Z-Wave connected 
+[outdoor smart outlet](https://www.getzooz.com/zooz-zen15-power-switch/)
+to power the well pump that we use for irrigation (using lake water).
+This was easy to connect (no hub required) to HASS via the Z-Wave integration
+(requires a Z-Wave USB gateway/radio, see my hardware setup above)).
+I installed one of the Amcrest wifi cameras and set
+Frigate to detect "bird" objects.  To avoid low (but non-zero) probability events that
+might damage the well pump, I connected a
+[pressure sensor](https://www.amazon.com/gp/product/B0748BHLQL/ref=ppx_yo_dt_b_asin_title_o04_s00?ie=UTF8&psc=1)
+(that will screw into one of the ports of the well pump) to a D1_mini ESP device
+to report the water pressure at the pump every 60s, letting
+HASS decide whether it's operating safely (so it can automatically turn it off
+if not).  In normal circumstances the pump runs at about 40psi, but if it loses
+its prime it will sputter down to 20psi or so, and if someone were to turn off
+all of the spigots it would shoot up to 90psi (though I have a relief valve, it
+might still be hard on the pump).
+I'm happy to say that the system detects geese reasonably well and turning on the
+sprinkler causes the geese to immediately decamp (at around 7s into
+[this clip;](https://www.dropbox.com/s/szf8qru47ypq84e/clip_goosecam_1663267722.24819-1663267741.046731.mp4?dl=0)
+the sprinkler is on the dock and not easy to see but the effect on the geese
+is obvious).  But the camera is still pretty
+far from the lakefront so it does not detect them until they move up closer to
+the house (and thus have been there for a while).  Next step will be to
+move the camera down to the dock.
+
+# A Primer on Home Assistant (HASS)  (August 2022) (Original post)
+
 
 *[Note- I reference specific products below but I have no relationship with any
 of the companies, and will not make any money if you buy them.  All it means is
@@ -283,57 +350,3 @@ HASS and 1883 for MQTT.  For $6/mo though you can subscribe to
 [Nabucasa](https://nabucasa.com/), a company run by Home Assistant founders that
 provides remote access without opening ports on your router.
 
-## Current Projects and Updates
-
-I'm working on a couple of things at the moment.  Having set up Frigate to take
-actions when certain objects (e.g., humans) are detected during certain time
-periods (including sending a picture of the person on my Apple watch), I 
-am working on a way to gently suggest to geese that they not congregate
-on our lawn, where they leave nasty messes behind.
-I have a Z-Wave connected 
-[outdoor smart outlet](https://www.getzooz.com/zooz-zen15-power-switch/)
-to power the well pump that we use for irrigation (using lake water).
-This was easy to connect (no hub required) to HASS via the Z-Wave integration
-(requires a Z-Wave USB gateway/radio, see my hardware setup above)).
-I installed one of the Amcrest wifi cameras and set
-Frigate to detect "bird" objects.  To avoid low (but non-zero) probability events that
-might damage the well pump, I connected a
-[pressure sensor](https://www.amazon.com/gp/product/B0748BHLQL/ref=ppx_yo_dt_b_asin_title_o04_s00?ie=UTF8&psc=1)
-(that will screw into one of the ports of the well pump) to a D1_mini ESP device
-to report the water pressure at the pump every 60s, letting
-HASS decide whether it's operating safely (so it can automatically turn it off
-if not).  In normal circumstances the pump runs at about 40psi, but if it loses
-its prime it will sputter down to 20psi or so, and if someone were to turn off
-all of the spigots it would shoot up to 90psi (though I have a relief valve, it
-might still be hard on the pump).
-I'm happy to say that the system detects geese reasonably well and turning on the
-sprinkler causes the geese to immediately decamp (at around 7s into
-[this clip;](https://www.dropbox.com/s/szf8qru47ypq84e/clip_goosecam_1663267722.24819-1663267741.046731.mp4?dl=0)
-the sprinkler is on the dock and not easy to see but the effect on the geese
-is obvious).  But the camera is still pretty
-far from the lakefront so it does not detect them until they move up closer to
-the house (and thus have been there for a while).  Next step will be to
-move the camera down to the dock.
-
-I'm also now using [ESPHome](https://esphome.io/) which is a very nice
-way to create simple, very cheap, wifi-connected sensors for HASS.  For
-instance, a [Particle Photon](https://store.particle.io/products/photon) is
-about $20 and one can get ESP devices with GPIO pins (e.g., the
-[D1_mini](https://www.amazon.com/gp/product/B081PX9YFV/ref=ppx_yo_dt_b_asin_title_o03_s00?ie=UTF8&psc=1)
-for about $3 each).  I built a set of these with
-[DS18B20 temperature sensors](https://www.amazon.com/gp/product/B012C597T0/ref=ppx_yo_dt_b_asin_title_o04_s00?ie=UTF8&psc=1)
-to evaluate the performance of our HVAC system throughout the home. The nice
-waterproof sensors on 6' cables are about $2-3 each.  You'd be tempted, though,
-to just solder one of the tiny (and even cheaper) 
-[IC form factor DS18B20 sensors](https://www.amazon.com/Diymore-DS18B20-Digital-Thermometer-Temperature/dp/B01IVN3X6K/ref=sr_1_3?crid=3MF0PRS9NQ69X&keywords=ds18b20&qid=1662260376&sprefix=ds18b20%2Caps%2C119&sr=8-3)
-to the ESP board.  This would be
-very elegant (no wires, etc.) but you'd be measuring the heat coming off of the
-ESP board rather than the ambient room temperature, so go for the ones on 
-cables.  Below you
-can see a grafana dashboard showing the temps in 8 rooms and a shaded outside location.
-The relatively flat green
-line is the temperature reading of the thermostat) and outside temperature 
-is the purple line. The sensors report every ~60s and I'm graphing the time simple moving
-average (built-in HASS filter) with a 10min window.
-
-<img src="/media/temps.png" align="center">
