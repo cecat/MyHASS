@@ -77,6 +77,8 @@ far from the lakefront so it does not detect them until they move up closer to
 the house (and thus have been there for a while).  Next step will be to
 move the camera down to the dock.
 
+<img src="/media/Geese-seq.png" align="center">
+
 
 # A Primer on Home Assistant (HASS)
 August 2022 --  Original post
