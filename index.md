@@ -7,7 +7,7 @@ CeC
 ## Satisfying Graph
 December 2022
 
-Using the room temperature probes and ESPHome setup described in November (below)
+Using the room temperature probes and ESPHome setup described in September (below)
 I am tuning the HVAC system for winter.  It is great to be able to see the
 results of fiddling with dampers rather than making
 changes and then asking humans to tell you if the temperature in a particular
