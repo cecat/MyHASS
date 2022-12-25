@@ -5,7 +5,8 @@ CeC
 
 
 ## Satisfying Graph
-(December 2022)
+December 2022
+
 It is great to be able to see the results of fiddling with dampers rather than making
 changes and then asking humans to tell you if the temperature in a particular
 room is "better."  Yesterday (12/24) at about 11am I made changes to fix one
@@ -17,7 +18,7 @@ which it joins the other rooms in oscillating within 2-3 degrees around the ther
 <img src="/media/tempsRichBR.png" align="center">
 
 ## Initial setup
-(September 2022)
+September 2022
 
 I'm also now using [ESPHome](https://esphome.io/) which is a very nice
 way to create simple, very cheap, wifi-connected sensors for HASS.  For
@@ -44,7 +45,7 @@ average (built-in HASS filter) with a 10min window.
 
 
 ## Geese Dispersal
-(August 2022)
+August 2022
 
 Having set up Frigate in HASS to take
 actions when certain objects (e.g., humans) are detected during certain time
@@ -77,7 +78,8 @@ the house (and thus have been there for a while).  Next step will be to
 move the camera down to the dock.
 
 # A Primer on Home Assistant (HASS)
-(August 2022) (Original post)
+August 2022 --  Original post
+
 Charlie Catlett
 
 
