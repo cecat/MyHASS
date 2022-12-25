@@ -1,14 +1,15 @@
-#Home Automation Adventures
+# Home Automation Adventures
 Charlie Catlett (August 2022)
 
 
-# Satisfying Graph (December 2022)
+## Satisfying Graph (December 2022)
 It is great to be able to see the results of fiddling with dampers rather than making
 changes and then asking humans to tell you if the temperature in a particular room is "better."  Yesterday I made changes to fix one bedroom that was running hot.  It had immediate effect!
 
-<img src="/media/tempsRichBR.png align="center">
+<img src="/media/tempsRichBR.png" align="center">
 
-# Initial setup (September 2022)
+## Initial setup (September 2022)
+
 I'm also now using [ESPHome](https://esphome.io/) which is a very nice
 way to create simple, very cheap, wifi-connected sensors for HASS.  For
 instance, a [Particle Photon](https://store.particle.io/products/photon) is
@@ -33,7 +34,7 @@ average (built-in HASS filter) with a 10min window.
 <img src="/media/temps.png" align="center">
 
 
-## Geese Dispersal
+## Geese Dispersal (August 2022)
 
 Having set up Frigate in HASS to take
 actions when certain objects (e.g., humans) are detected during certain time
