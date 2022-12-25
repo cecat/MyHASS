@@ -1,4 +1,6 @@
 # Home Automation Adventures
+An initial (long) overview of my use of Home Assistant, followed (in reverse chronological order) by miscellaneous updates.
+
 CeC
 
 
