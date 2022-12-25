@@ -17,7 +17,7 @@ which it joins the other rooms in oscillating within 2-3 degrees around the ther
 
 <img src="/media/tempsRichBR.png" align="center">
 
-## Initial setup
+## Monitoring Room Temperatures using ESPHome
 September 2022
 
 I'm also now using [ESPHome](https://esphome.io/) which is a very nice
@@ -44,7 +44,7 @@ average (built-in HASS filter) with a 10min window.
 <img src="/media/temps.png" align="center">
 
 
-## Geese Dispersal
+## Geese Dispersal Using Frigate
 August 2022
 
 Having set up Frigate in HASS to take
@@ -76,6 +76,7 @@ is obvious).  But the camera is still pretty
 far from the lakefront so it does not detect them until they move up closer to
 the house (and thus have been there for a while).  Next step will be to
 move the camera down to the dock.
+
 
 # A Primer on Home Assistant (HASS)
 August 2022 --  Original post
