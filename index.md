@@ -7,7 +7,9 @@ CeC
 ## Satisfying Graph
 December 2022
 
-It is great to be able to see the results of fiddling with dampers rather than making
+Using the room temperature probes and ESPHome setup described in November (below)
+I am tuning the HVAC system for winter.  It is great to be able to see the
+results of fiddling with dampers rather than making
 changes and then asking humans to tell you if the temperature in a particular
 room is "better."  Yesterday (12/24) at about 11am I made changes to fix one
 bedroom (the yellow line) that was running hot.  It had immediate effect!
@@ -20,7 +22,9 @@ which it joins the other rooms in oscillating within 2-3 degrees around the ther
 ## Monitoring Room Temperatures using ESPHome
 September 2022
 
-I'm also now using [ESPHome](https://esphome.io/) which is a very nice
+We replaced the HVAC system in August so I need to be able to fine-tune for even
+heat distribution this winter (then for cooling next summer).  I'm using
+[ESPHome](https://esphome.io/) which is a very nice
 way to create simple, very cheap, wifi-connected sensors for HASS.  For
 instance, a [Particle Photon](https://store.particle.io/products/photon) is
 about $20 and one can get ESP devices with GPIO pins (e.g., the
