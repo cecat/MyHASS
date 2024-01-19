@@ -50,16 +50,13 @@ My finite state machine has four states, which are 'danger levels'
 zero through 3.  These are each based on the outdoor temperature (OT)
 and crawlspace temperature (CT). Moving into a state involves changing the
 thermostat setting to increase or decrease the temperature in the home:
-<ol>
-  <li>Level 0:       (OT > 20F)               ->HVAC set to 63F.
-	</li>
-  <li>Level 1: (10F < OT < 20F)               ->HVAC set to 68F.
-	</li>
-  <li>Level 2:       (OT <=10F) & (39F < CT)  ->HVAC set to 70F.
-	</li>
-  <li>Level 3:       (OT <=10F) & (CT <= 39F) ->HVAC set to 73F.
-	</li>
-</ol>
+
+|Danger Level | Outside Temperature | Crawlspace Temperature | Set HVAC to: |
+| :---        | :---                | :---                   | :---         |
+| Level-0     |       T >= 20F       | n/a                   | 63F          |
+| Level-1     | 10F < T <  20F       | n/a                   | 68F          |
+| Level-2     |       T <= 10F       | >  39F                | 70F          |
+| Level-3     |       T <= 10F       | <= 39F                | 73F          |
 
 It's a 2 hour drive (if I'm home!) so if we are at danger level 3 I am
 also on the lookout for a warning message from the Electron (if the 
