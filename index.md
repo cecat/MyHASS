@@ -61,9 +61,11 @@ thermostat setting to increase or decrease the temperature in the home:
 | ALERT 1     |       n/a           | <=35F                  | <SMS msg>    |
 | ALERT 2     |       n/a           | <=32F                  | <SMS msg>    |
 
-It's a 2 hour drive (if I'm home!) so if we are at danger level 3 I am
-also on the lookout for a warning message from the Electron (if the 
-crawlspace temperature drops to 35F), at which point I decide whether
+The extra alert levels for crawlspace temperature dropping to 35F and 32F
+I have more agressive automations than just SMS messages,
+including turning on a warning light in our bedroom, since these indicate
+that human intervention may be needed.  It's a 2 hour drive (if I'm home!)
+so if we hit these temperature levels I decide whether
 to go drain the pipes.  If I decide correctly then I never get the 
 warning message that the temperature dropped to 32F!
 
