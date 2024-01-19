@@ -41,7 +41,7 @@ temperature hits 35F and again if it hits 32F.  (more on this below)
 
 So the Electron gives me crawlspace temperature,
 and for outdoor temperature I use a 
-HA weather plug in ([Meteorologisk institutt](Met.no)),
+HA weather plug in ([Meteorologisk Institutt](Met.no)),
 though there are several 
 like this. In this case, based on the Lat/Lon you configure it finds the
 closest National Weather Service station.
@@ -57,6 +57,9 @@ thermostat setting to increase or decrease the temperature in the home:
 | Level-1     | 10F < T <  20F       | n/a                   | 68F          |
 | Level-2     |       T <= 10F       | >  39F                | 70F          |
 | Level-3     |       T <= 10F       | <= 39F                | 73F          |
+| | | | |
+| ALERT 1     |       n/a           | <=35F                  | <SMS msg>    |
+| ALERT 2     |       n/a           | <=32F                  | <SMS msg>    |
 
 It's a 2 hour drive (if I'm home!) so if we are at danger level 3 I am
 also on the lookout for a warning message from the Electron (if the 
