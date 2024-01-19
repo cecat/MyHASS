@@ -9,8 +9,8 @@ January 2024
 
 As noted below, one of my motivations for doing home automation has been
 to keep the pipes from freezing at a remote property. In winter we reduce
-the heat enough to be economical (not wasteful) but high enough that we
-don't get mold everywhere (which seems to happen below about 55-60F).  
+the heat at 63F to be economical (not wasteful) but high enough that we
+don't get mold everywhere (which seems to happen below about 60F).  
 The crawlspace is pretty well sealed and unless the outside temperature
 dips below perhaps -10F for a long period of time it will stay above 
 freezing if the house is reasonably warm (70-75F).
@@ -18,7 +18,7 @@ freezing if the house is reasonably warm (70-75F).
 Initially I installed
 a [Particle Electron](https://docs.particle.io/electron/), which is
 an Arduino-compatible, cellular connected 
-(2G, very inexpensive service) device. I outfitted this with a 
+(3G, very inexpensive service) device. I outfitted this with a 
 [DS18B20 temperature sensors](https://www.amazon.com/gp/product/B012C597T0/ref=ppx_yo_dt_b_asin_title_o04_s00?ie=UTF8&psc=1), 
 drilled a small hole in the floor (under the fridge), and dangled
 the temperature sensor in the crawlspace.  Cellular coverage is not 
@@ -27,16 +27,17 @@ great at this location, so I upgraded the
  that came with the Electron with a slightly larger one. Still the
 connectivity is spotty, but I have this report (using MQTT) to my HA 
 server every 5 minutes and have not seen any gaps longer than
-30 minutes or so, which is fine for my purposes. 
+30 minutes or so, which is fine for my purposes. The Electron is plugged in,
+but also has a LiPo battery, so I check where it's getting it's power
+as well, and if it's drawing from the battery that tells me the power
+is out at the property, and I won't have Internet thus no way to
+adjust the temperature.  Fortunately that is an edge case that has not
+materialized by once or twice in 25 year so far.
 
 The code is
-[github.com/cecat/Crawlspacer/](https://github.com/cecat/Crawlspacer/). 
-The code has some internal logic to send warning messages if the
-temperature hits 35F and again if it hits 32F.  
-
-well as just crawlspace temperature. I didn't remote that code when
-I built the finite state logic in the HA server (using automations), 
-so I still also get state messages if there is danger detected.
+[github.com/cecat/Crawlspacer/](https://github.com/cecat/Crawlspacer/) 
+and also has some internal logic to send warning messages if the
+temperature hits 35F and again if it hits 32F.  (more on this below)
 
 So the Electron gives me crawlspace temperature,
 and for outdoor temperature I use a 
