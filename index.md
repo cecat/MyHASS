@@ -389,6 +389,10 @@ modern wiring with ground in switch boxes, but [these are pretty cool](https://w
 [hacked](https://www.youtube.com/watch?v=dt5-iZc4_qU) to run
 [Tasmota](https://tasmota.github.io/docs/). Sadly, Aoycocr updated their firmware
 about 2 years ago so that this process no longer works.
+  - Update I recently ordered some ESP-based, Tasmota-enabled smart plugs
+    from
+[Athom.tech](https://www.athom.tech/blank-1/tasmota-esp32-c3-us-plug-v3) 
+that are terrific.
 - IKEA [motion sensors](https://www.ikea.com/ca/en/p/tradfri-wireless-motion-sensor-smart-white-60377655/)
 and Zigbee 
 [signal repeaters](https://community.home-assistant.io/t/ikea-zigbee-signal-repeater/134350)
