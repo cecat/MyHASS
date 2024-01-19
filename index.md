@@ -388,7 +388,7 @@ modern wiring with ground in switch boxes, but [these are pretty cool](https://w
 - [Aoycocr smart plugs](https://www.amazon.com/dp/B07N1JPPXK) that I
 [hacked](https://www.youtube.com/watch?v=dt5-iZc4_qU) to run
 [Tasmota](https://tasmota.github.io/docs/). Sadly, Aoycocr updated their firmware
-about 2 years ago so that this process no longer works.
+about 2 years ago so that this process no longer works. Thus, like TP-Link, you have to use their software to control, and you might not really want your wifi ssid and password to be shared with a cloud server in a country across the ocean.
   - Update I recently ordered some ESP-based, Tasmota-enabled smart plugs
     from
 [Athom.tech](https://www.athom.tech/blank-1/tasmota-esp32-c3-us-plug-v3) 
