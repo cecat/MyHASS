@@ -4,6 +4,67 @@ An initial (long) overview of my use of Home Assistant, followed (in reverse chr
 CeC
 
 
+## Finite State Machines and Autonomy (of the simplest kind)
+January 2024
+
+As noted below, one of my motivations for doing home automation has been
+to keep the pipes from freezing at a remote property. In winter we reduce
+the heat enough to be economical (not wasteful) but high enough that we
+don't get mold everywhere (which seems to happen below about 55-60F).  
+The crawlspace is pretty well sealed and unless the outside temperature
+dips below perhaps -10F for a long period of time it will stay above 
+freezing if the house is reasonably warm (70-75F).
+
+Initially I installed
+a [Particle Electron](https://docs.particle.io/electron/), which is
+an Arduino-compatible, cellular connected 
+(2G, very inexpensive service) device. I outfitted this with a 
+[DS18B20 temperature sensors](https://www.amazon.com/gp/product/B012C597T0/ref=ppx_yo_dt_b_asin_title_o04_s00?ie=UTF8&psc=1), 
+drilled a small hole in the floor (under the fridge), and dangled
+the temperature sensor in the crawlspace.  Cellular coverage is not 
+great at this location, so I upgraded the
+[Taoglas antenna](https://docs.particle.io/assets/datasheets/PC104.07.0165C.pdf)
+ that came with the Electron with a slightly larger one. Still the
+connectivity is spotty, but I have this report (using MQTT) to my HA 
+server every 5 minutes and have not seen any gaps longer than
+30 minutes or so, which is fine for my purposes. 
+
+The code is
+[github.com/cecat/Crawlspacer/](https://github.com/cecat/Crawlspacer/). 
+The code has some internal logic to send warning messages if the
+temperature hits 35F and again if it hits 32F.  
+
+well as just crawlspace temperature. I didn't remote that code when
+I built the finite state logic in the HA server (using automations), 
+so I still also get state messages if there is danger detected.
+
+So the Electron gives me crawlspace temperature,
+and for outdoor temperature I use a 
+HA weather plug in (Meteorologisk institutt (Met.no), though there are several 
+like this. In this case, based on the Lat/Lon you configure it finds the
+closest National Weather Service station.
+
+My finite state machine has four states, which are 'danger levels'
+zero through 3.  These are each based on the outdoor temperature (OT)
+and crawlspace temperature (CT). Moving into a state involves changing the
+thermostat setting to increase or decrease the temperature in the home:
+<ol>
+  <li>Level 0:       (OT > 20F)               ->HVAC set to 63F.
+	</li>
+  <li>Level 1: (10F < OT < 20F)               ->HVAC set to 68F.
+	</li>
+  <li>Level 2:       (OT <=10F) & (39F < CT)  ->HVAC set to 70F.
+	</li>
+  <li>Level 3:       (OT <=10F) & (CT <= 39F) ->HVAC set to 73F.
+	</li>
+</ol>
+
+It's a 2 hour drive (if I'm home!) so if we are at danger level 3 I am
+also on the lookout for a warning message from the Electron (if the 
+crawlspace temperature drops to 35F), at which point I decide whether
+to go drain the pipes.  If I decide correctly then I never get the 
+warning message that the temperature dropped to 32F!
+
 ## Satisfying Graph
 December 2022
 
