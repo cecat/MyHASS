@@ -385,6 +385,9 @@ outdoor smart plugs. (requires the Z-Wave USB stick, see Hardware)
 - [Lutron Caseta switches](https://www.amazon.com/s?k=lutron+caseta&i=tools&crid=3BAI2YG29DFSV&sprefix=lutron%2Ctools%2C79&ref=nb_sb_ss_ts-doa-p_2_6)
 (I have not explored whether I can ditch the hub) Make sure you have relatively
 modern wiring with ground in switch boxes, but [these are pretty cool](https://www.amazon.com/gp/product/B07Z6RFQ35/ref=ppx_yo_dt_b_search_asin_title) if you don't want to mess with wiring at all!
+- IKEA [motion sensors](https://www.ikea.com/ca/en/p/tradfri-wireless-motion-sensor-smart-white-60377655/)
+and Zigbee 
+[signal repeaters](https://community.home-assistant.io/t/ikea-zigbee-signal-repeater/134350)
 - [Aoycocr smart plugs](https://www.amazon.com/dp/B07N1JPPXK) that I
 [hacked](https://www.youtube.com/watch?v=dt5-iZc4_qU) to run
 [Tasmota](https://tasmota.github.io/docs/). Sadly, Aoycocr updated their firmware
@@ -393,10 +396,6 @@ about 2 years ago so that this process no longer works. Thus, like TP-Link, you 
     from
 [Athom.tech](https://www.athom.tech/blank-1/tasmota-esp32-c3-us-plug-v3) 
 that are terrific.
-- IKEA [motion sensors](https://www.ikea.com/ca/en/p/tradfri-wireless-motion-sensor-smart-white-60377655/)
-and Zigbee 
-[signal repeaters](https://community.home-assistant.io/t/ikea-zigbee-signal-repeater/134350)
-(which they don't seem to sell any more).
 
 ### DIY sensors ###
 - [Particle Photon](https://store.particle.io/products/photon) to create a
