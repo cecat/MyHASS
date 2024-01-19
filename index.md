@@ -41,7 +41,8 @@ temperature hits 35F and again if it hits 32F.  (more on this below)
 
 So the Electron gives me crawlspace temperature,
 and for outdoor temperature I use a 
-HA weather plug in (Meteorologisk institutt (Met.no), though there are several 
+HA weather plug in ([Meteorologisk institutt](Met.no)),
+though there are several 
 like this. In this case, based on the Lat/Lon you configure it finds the
 closest National Weather Service station.
 
