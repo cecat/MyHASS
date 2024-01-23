@@ -31,8 +31,8 @@ Assistant (HA) server every 5 minutes and have not seen any gaps longer than
 but also has a LiPo battery, so I check where it's getting it's power
 as well, and if it's drawing from the battery that tells me the power
 is out at the property, and I won't have Internet thus no way to
-adjust the temperature.  Fortunately that is an edge case that has not
-materialized by once or twice in 25 year so far.
+adjust the temperature.  Fortunately that is an edge case that has only
+materialized once or twice in 25 year so far.
 
 In addition to reporting crawl space temperature, the Electron will send 
 a warning message (using the MQTT topic mapped in HA to a boolean) when
