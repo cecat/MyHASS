@@ -25,8 +25,8 @@ the temperature sensor in the crawlspace.  Cellular coverage is not
 great at this location, so I upgraded the
 [Taoglas antenna](https://docs.particle.io/assets/datasheets/PC104.07.0165C.pdf)
  that came with the Electron with a slightly larger one. Still the
-connectivity is spotty, but I have this report (using MQTT) to my HA 
-server every 5 minutes and have not seen any gaps longer than
+connectivity is spotty, but I have this report (using MQTT) to my Home
+Assistant (HA) server every 5 minutes and have not seen any gaps longer than
 30 minutes or so, which is fine for my purposes. The Electron is plugged in,
 but also has a LiPo battery, so I check where it's getting it's power
 as well, and if it's drawing from the battery that tells me the power
