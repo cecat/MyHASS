@@ -26,13 +26,18 @@ great at this location, so I upgraded the
 [Taoglas antenna](https://docs.particle.io/assets/datasheets/PC104.07.0165C.pdf)
  that came with the Electron with a slightly larger one. Still the
 connectivity is spotty, but I have this report (using MQTT) to my Home
-Assistant (HA) server every 5 minutes and have not seen any gaps longer than
-30 minutes or so, which is fine for my purposes. The Electron is plugged in,
+Assistant (HA) server every 5 minutes though I have seen some long (>1h) gaps
+so may need to revisit this. So far, at least when the temperatures are
+low and it matters, this has not had an impact.  The Electron is plugged
+into a wall outlet,
 but also has a LiPo battery, so I check where it's getting it's power
 as well, and if it's drawing from the battery that tells me the power
 is out at the property, and I won't have Internet thus no way to
-adjust the temperature.  Fortunately that is an edge case that has only
-materialized once or twice in 25 year so far.
+adjust the temperature (this also triggers a MQTT message with
+a topic associated with a boolean on HA, so I track the power and 
+get automated alerts if it goes out.
+Fortunately that is an edge case that has only
+materialized once or twice in 25 years so far.
 
 In addition to reporting crawl space temperature, the Electron will send 
 a warning message (using the MQTT topic mapped in HA to a boolean) when
