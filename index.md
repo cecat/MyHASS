@@ -10,8 +10,8 @@ January 2024
 As noted below, one of my motivations for doing home automation has been
 to keep the pipes from freezing at a remote property. In winter we reduce
 the heat at 63F to be economical (not wasteful) but high enough that we
-don't get mold everywhere (which seems to happen below about 60F).  
-The crawlspace is pretty well sealed and unless the outside temperature
+don't get mold everywhere (which seems to happen below about 60F).  The
+crawlspace is pretty well sealed and unless the outside temperature
 dips below perhaps -10F for a long period of time it will stay above 
 freezing if the house is reasonably warm (70-75F).
 
