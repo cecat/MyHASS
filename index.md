@@ -15,7 +15,7 @@ The crawlspace is pretty well sealed and unless the outside temperature
 dips below perhaps -10F for a long period of time it will stay above 
 freezing if the house is reasonably warm (70-75F).
 
-Initially I installed
+Several years ago I installed
 a [Particle Electron](https://docs.particle.io/electron/), which is
 an Arduino-compatible, cellular connected 
 (3G, very inexpensive service) device. I outfitted this with a 
@@ -34,22 +34,34 @@ is out at the property, and I won't have Internet thus no way to
 adjust the temperature.  Fortunately that is an edge case that has not
 materialized by once or twice in 25 year so far.
 
+In addition to reporting crawl space temperature, the Electron will send 
+a warning message (using the MQTT topic mapped in HA to a boolean) when
+the crawl space drops to 37F, and a similar warning message when the 
+temperature hits 35F.  I had automations to send me texts, turn on 
+lights, etc. when these were received so that I could manually increae
+the heat via remote access to my Nest thermostat.
+
+While we were experiencing the deep freeze around here in January 2024
+I decided to automate these adjustments.
+
 The code is
 [github.com/cecat/Crawlspacer/](https://github.com/cecat/Crawlspacer/) 
 and also has some internal logic to send warning messages if the
 temperature hits 35F and again if it hits 32F.  (more on this below)
 
-So the Electron gives me crawlspace temperature,
+The Electron gives me crawlspace temperature,
 and for outdoor temperature I use a 
 HA weather plug in ([Meteorologisk Institutt](Met.no)),
 though there are several 
 like this. In this case, based on the Lat/Lon you configure it finds the
 closest National Weather Service station.
 
-My finite state machine has four states, which are 'danger levels'
-zero through 3.  These are each based on the outdoor temperature (OT)
-and crawlspace temperature (CT). Moving into a state involves changing the
-thermostat setting to increase or decrease the temperature in the home:
+I implemented a rules-based control system using a finite state machine
+approach with four states, each a 'danger level,' 
+zero through 3.  State changes  are each triggered by 
+outdoor temperature (OT) and crawlspace temperature (CT) thresholds.
+When moving into a given state the
+thermostat setting is increased or decreased:
 
 |Danger Level | Outside Temperature | Crawlspace Temperature | Set HVAC to: |
 | :---        | :---                | :---                   | :---         |
@@ -60,15 +72,29 @@ thermostat setting to increase or decrease the temperature in the home:
 | | | | |
 | ALERT 1     |       n/a           | <=35F                  | <SMS msg>    |
 | ALERT 2     |       n/a           | <=32F                  | <SMS msg>    |
+ 
 
-The extra alert levels at the bottom of the table -- for
-crawlspace temperature dropping to 35F and 32F --
-trigger more agressive automations than just SMS messages,
+I kept the original alert messages for 37F and 35F, which are shown
+as the extra alert levels at the bottom of the table.
+As before, these trigger more agressive automations than just SMS messages,
 including turning on a warning light in our bedroom, since these indicate
 that human intervention may be needed.  It's a 2 hour drive (if I'm home!)
 so if we hit these temperature levels I decide whether
 to go drain the pipes.  If I decide correctly then I never get the 
 warning message that the temperature dropped to 32F!
+
+I also explored (along with a buddy named GPT-4) other methods such as
+ML models or PID, but even with
+2+ years of data the subset that is useful (when the temperatures
+are very low) is quite tiny from a model training point of view. I did 
+do some analysis, for the periods where the outdoor temperature was below
+40F, of the correlations between outdoor temperature and
+crawlspace temperature (pulling the latter down) as well as between
+the crawlspace temperature and indoor temperature (pulling it up).
+In very round numbers, the crawlspace will drop 1 degree for every 4 degree
+drop outside. And the crawlspace temperature will increase one degree
+for every 3 degree increase in indoor temperature.
+
 
 
 ## Satisfying Graph
