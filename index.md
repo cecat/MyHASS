@@ -47,7 +47,7 @@ lights, etc. when these were received so that I could manually increae
 the heat via remote access to my Nest thermostat.
 
 While we were experiencing the deep freeze around here in January 2024
-I decided to automate these adjustments.  (Having said this, of course
+I decided to automate these adjustments.  (Having said this, *of course*
 it makes much more sense to put a heater with a thermostat in the
 crawlspace! But for now , partly because we almost never reach any
 danger levels, I'm using waste heat from the house as an interim hack.)
