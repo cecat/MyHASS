@@ -1,2 +1,4 @@
 theme: jekyll-theme-modernist
 markdown: kramdown
+include:
+  - projects
