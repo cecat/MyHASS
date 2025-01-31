@@ -1,0 +1,105 @@
+# Setting up LED Strips in Home Assistant using WLED
+
+January 2025
+
+Recently we goe bids for a kitchen remodel and some included an option to put
+under-cabinet lighting, which I think is kinda cool.  They ballparked it at like
+$1,000 and who knows if their tech would even be smart enough to integrate with
+Home Assistant which to me is mandatory.  Moreover, that price is pretty high.
+
+Around the same time I heard about the
+[WLED Project](https://kno.wled.ge/)
+so decided to try it out.
+
+Below are the steps I took to get things basically up and running.  There is a
+small bit of soldering involved but nothing fancy.  I'm going to link to the
+specific components I used as a courtesy in case helpful to you, but there may
+well be better options. I'm not an influencer so I get no kickback from the
+sources.  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+t (i.e., can talk to Home Assistant) it seemed to me this was a bit steep. I heard about the
+[WLED Project](https://kno.wled.ge/)
+and so decided to give it a try.
+
+Below are the steps I took, in case useful to you.  I reference specific products
+because those are what I found and used, but I don't get any kick-back from those
+companies nor would I claim there are not better options.
