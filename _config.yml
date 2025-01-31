@@ -1,5 +1,4 @@
-#theme: jekyll-theme-modernist
-theme: architect
+theme: jekyll-theme-modernist
 markdown: kramdown
 permalink: pretty
 include:
