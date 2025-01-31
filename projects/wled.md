@@ -1,6 +1,7 @@
 ---
 layout: default
 title: WLED Project
+permalink: /projects/wled/
 ---
 
 # Setting up LED Strips in Home Assistant using WLED
