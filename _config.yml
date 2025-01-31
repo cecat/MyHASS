@@ -1,4 +1,6 @@
 theme: jekyll-theme-modernist
 markdown: kramdown
+permalink: pretty
 include:
   - projects
+  - _posts
