@@ -1,3 +1,8 @@
+---
+layout: defulat
+title: WLED Project
+---
+
 # Setting up LED Strips in Home Assistant using WLED
 
 January 2025
