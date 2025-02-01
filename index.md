@@ -1,9 +1,8 @@
 ---
 layout: default
-#title: Adventures in Home Automation
 ---
 
-# Blog Posts
+# Reports
 <ul>
   {% for post in site.posts %}
     <li>
@@ -13,7 +12,8 @@ layout: default
 </ul>
 
 
-*Note: In the course of describing things I have built I often point to specific products, 
-since they have worked for me.  That does not mean that they are the best (or only)
-products, not that my source is the best place to buy them.  I receive no compensation
-from the companies that make or sell these products.*
+*Note: In the course of describing things I have built  (in a way that others can readiyl
+replicate), I often point to specific products.
+While these specific components have worked for me, I am not implying that they are the
+best (or only) products, not that my source is the best place to buy them.
+I receive no compensation from the companies that make or sell these products.*

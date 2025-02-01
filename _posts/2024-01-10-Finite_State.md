@@ -4,6 +4,9 @@ title: "Finite State Machines and Autonomy (of the simplest kind)"
 date: 2024-01-10
 categories: integrations hvac
 ---
+## Finite State Machines and Autonomy (of the simplest kind)
+
+*January 10, 2024*
 
 One of my motivations for doing home automation has been
 to keep the pipes from freezing at a remote property. In winter we reduce
