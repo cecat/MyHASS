@@ -2,7 +2,7 @@
 layout: default
 ---
 
-# Reports
+## Reports
 <ul>
   {% for post in site.posts %}
     <li>
