@@ -12,7 +12,7 @@ layout: default
 </ul>
 
 
-*Note: In the course of describing things I have built  (in a way that others can readiyl
+*Note: In the course of describing things I have built  (in a way that others can quickly
 replicate), I often point to specific products.
 While these specific components have worked for me, I am not implying that they are the
 best (or only) products, not that my source is the best place to buy them.
