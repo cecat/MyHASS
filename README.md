@@ -1,4 +1,4 @@
-# A Primer on Home Assistant (HASS)
-Charlie Catlett (August 2022)
+# Adventures in Home Automation
+Charlie Catlett 
 
-See [index.md](./index.md)
+A [blog](./blog)
