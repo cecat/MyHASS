@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Adventures in Home Automation
+#title: Adventures in Home Automation
 ---
 
 # Blog Posts
