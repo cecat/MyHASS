@@ -22,12 +22,13 @@ to set up your ALCF auth token, required to access models via the inference serv
 The instructions below use the directory
 names *myPDFcache* and *JSON-out* for these two directories. Substitute your directory names as appropriate.
 Details on programs follow. Use `-h` to learn about other options.
++ create your directories
 
 ```
 mkdir myPDFcache JSON-out
 ```
 
-Populate your myPDFcache directory with your cache of PDF files.
++ Populate your myPDFcache directory with your cache of PDF files.
 
 2. Set up your Conda environment.  If you already set up a conda env (such as via the
 [prerequisites](https://github.com/argonne-lcf/inference-endpoints?tab=readme-ov-file#%EF%B8%8F-prerequisites)
