@@ -43,16 +43,16 @@ python simple_parse.py -i pdf-corpus -o parse-JSON-data
 ```
 
 + Or: Extract text from PDFs with higher-quality AdaParse 
-See (https://github.com/7shoe/AdaParse/tree/main)[https://github.com/7shoe/AdaParse/tree/main] 
+See [https://github.com/7shoe/AdaParse/tree/main](https://github.com/7shoe/AdaParse/tree/main) 
 (still testing this step)
 
 3. Use specified LLM to generate MCQs for papers, after dividing paper text into chunks
 and augmenting each chunk with extra info. In this example we will specify the
 *allenai/Llama-3.1-Tulu-3-405B* model (see 
-(alcf endpoints)[https://github.com/argonne-lcf/inference-endpoints] 
+[alcf endpoints](https://github.com/argonne-lcf/inference-endpoints) 
 for more options)
 ```
-python generate_mcqs.py -i parse-JSON-data -o MCQ-JSON-file -m <model>
+python generate_mcqs.py -i parse-JSON-data -o MCQ-JSON-file -m allenai/Llama-3.1-Tulu-3-405B
 ```
 
 + Next is useful if you run `generate_mcqs.py` multiple times and thus have multiple JSON files
