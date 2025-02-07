@@ -27,12 +27,20 @@ Details on programs follow. Use `-h` to learn about other options.
 mkdir pdf-corpus parse-JSON-data
 ```
 
-2. Install additional dependencies *PyPDF2* and *pdfminer*.  (for the latter, we will install the entire package to make sure we have all of the modules we need such as *extract_text*)
+Populate your pdf-corpus directory with your cache of PDF files.
+
+2. Set up your Conda environment.  If you already set up a conda env (such as via the
+[prerequisites](https://github.com/argonne-lcf/inference-endpoints?tab=readme-ov-file#%EF%B8%8F-prerequisites)
+page referenced above) then you can update your environment with the new dependencies you'll need here:
 ```
-pip install PyPDF2 pdfminer pdfminer.six
+conda env update --name <name_of_your_conda_env> --file environment.yml
 ```
-Note: If you are using a Mac and you use HomeBrew, you may need to force the install
-to apply to your conda environment, i.e.: *python -m pip install PyPDF2 pdfminer*
+Otherwise, create a new Conda environment as follows:
+```
+conda env create -f environment.yml
+```
+If you get an error *CondaValueError: prefix already exists* then you can change the name of the
+Conda environment by editing the environment.yml file (the name is specified in the first line).
 
 3. Extract text from PDFs with simple parser to create JSON files
 ```
