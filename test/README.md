@@ -21,9 +21,14 @@ to set up your ALCF auth token, required to access models via the inference serv
 
 ### Programs to run PDFs &rarr; JSON &rarr; LLM-generated MCQs &rarr; LLM-generated answers &rarr; LLM-scored answers
 
-1. Create directories for your PDF files and for JSON output.  The instructions below use the directory
+1. From within your working directory, create directories for your PDF files and for JSON output.
+The instructions below use the directory
 names *pdf-corpus* and *parse-JSON-data* for these two directories. Substitute your directory names as appropriate.
 Details on programs follow. Use `-h` to learn about other options.
+
+```
+mkdir pdf-corpus parse-JSON-data
+```
 
 2. Install additional dependencies *PyPDF2* and *pdfminer*.  
 ```
