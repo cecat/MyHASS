@@ -18,7 +18,7 @@ to set up your ALCF auth token, required to access models via the inference serv
 
 ### Programs to run PDFs &rarr; JSON &rarr; LLM-generated MCQs &rarr; LLM-generated answers &rarr; LLM-scored answers
 
-1. From within your working directory, create directories for your PDF files and for JSON output.
+1. Set up your working directory. From within your working directory, create directories for your PDF files and for JSON output.
 The instructions below use the directory
 names *pdf-corpus* and *parse-JSON-data* for these two directories. Substitute your directory names as appropriate.
 Details on programs follow. Use `-h` to learn about other options.
@@ -39,17 +39,20 @@ python -m pip install PyPDF2 pdfminer
 
 3. Extract text from PDFs with simple parser to create JSON files
 ```
-python simple_parse.py -i <PDF-directory> -o <Parse-JSON-directory>
+python simple_parse.py -i pdf-corpus -o parse-JSON-data
 ```
 
-1a) Or: Extract text from PDFs with higher-quality AdaParse 
++ Or: Extract text from PDFs with higher-quality AdaParse 
 See (https://github.com/7shoe/AdaParse/tree/main)[https://github.com/7shoe/AdaParse/tree/main] 
 (still testing this step)
 
 3. Use specified LLM to generate MCQs for papers, after dividing paper text into chunks
-    and augmenting each chunk with extra info
+and augmenting each chunk with extra info. In this example we will specify the
+*allenai/Llama-3.1-Tulu-3-405B* model (see 
+(alcf endpoints)[https://github.com/argonne-lcf/inference-endpoints] 
+for more options)
 ```
-python generate_mcqs.py -i <Parse-JSON-directory> -o <MCQ-JSON-file> -m <model>
+python generate_mcqs.py -i parse-JSON-data -o MCQ-JSON-file -m <model>
 ```
 
 + Next is useful if you run `generate_mcqs.py` multiple times and thus have multiple JSON files
