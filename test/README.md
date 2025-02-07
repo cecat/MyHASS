@@ -22,13 +22,13 @@ to set up your ALCF auth token, required to access models via the inference serv
 The instructions below use the directory
 names *myPDFcache* and *JSON-out* for these two directories. Substitute your directory names as appropriate.
 Details on programs follow. Use `-h` to learn about other options.
-+ create your directories
++ Create your directories
 
 ```
-mkdir myPDFcache JSON-out
+mkdir myPDFdir myJSONdir
 ```
 
-+ Populate your myPDFcache directory with your cache of PDF files.
++ Populate your myPDFdir directory with your PDF files.
 
 2. Set up your Conda environment.  If you already set up a conda env (such as via the
 [prerequisites](https://github.com/argonne-lcf/inference-endpoints?tab=readme-ov-file#%EF%B8%8F-prerequisites)
@@ -44,30 +44,30 @@ Conda environment by editing the first line of the environment.yml file.
 
 3. Extract text from PDFs with simple parser to create JSON files
 ```
-python simple_parse.py -i myPDFcache -o JSON-out
+python simple_parse.py -i myPDFdir -o myJSONdir
 ```
 
 + Or: Extract text from PDFs with higher-quality AdaParse 
 See [https://github.com/7shoe/AdaParse/tree/main](https://github.com/7shoe/AdaParse/tree/main) 
 (still testing this step)
 
-3. Use specified LLM to generate MCQs for papers, after dividing paper text into chunks
+4. Use specified LLM to generate MCQs for papers, after dividing paper text into chunks
 and augmenting each chunk with extra info. In this example we will specify the
 *allenai/Llama-3.1-Tulu-3-405B* model (see 
 [alcf endpoints](https://github.com/argonne-lcf/inference-endpoints) 
 for more options)
 ```
-python generate_mcqs.py -i parse-JSON-data -o MCQ-JSON-file -m allenai/Llama-3.1-Tulu-3-405B
+python generate_mcqs.py -i myJSONdir -o MCQ-JSON-file -m allenai/Llama-3.1-Tulu-3-405B
 ```
 
 + Next is useful if you run `generate_mcqs.py` multiple times and thus have multiple JSON files
 ```
-python combine_json_files.py -i <JSON-directory> -o <JSON-file>
+python combine_json_files.py -i myJSONdir -o JSON-file
 ```
 
 4. Select subset of MCQs from output of step 2, for subsequent use
 ```
-python select_mcqs_at_random.py -i <MCQ-JSON-file> -o <MCQ-JSON-file> -n <N>
+python select_mcqs_at_random.py -i MCQ-JSON-file -o MCQ-JSON-file -n <N>
 ```
 
 5. Use specified LLM to generate answers to MCQs generated in step 2
@@ -76,7 +76,7 @@ Use LLM <model>, executed at <locn> (see below), to generate MCQs.
 Place results in "<result-directory>/answers_<model>.json"
 
 ```
-python generate_answers.py -i <input-json> -o <result-directory> -m <locn>:<model>
+python generate_answers.py -i MCQ-JSON-file -o myRESULTSdir -m <locn>:<model>
 ```
 
 6. Use specified LLM to score answers to MCQs generated in step 4
@@ -84,14 +84,14 @@ Look for file "answers_<model-A>.json" in <result-directory>
 Produce file "scores_<locnA>:<model-A>:<locnA>:<model-B>.json", with any `/` replaced with `+`.
 Where <model-A> and <model-B> are executed at <locn-A> and <locn-B>, respectively.
 
-*python score_answers.py -o <result-directory> -a <locn-A>:<model-A> -b <locn-B>:<model-B>*
+*python score_answers.py -o myRESULTSdir -a <locn-A>:<model-A> -b <locn-B>:<model-B>*
 
 7. Run whatever LLMs are running on ALCF inference service to generate and/or score answers
 (Based on:
 + Query to inference service to identify running models
 + Examining answers and scores files in <result-directory>)
 ```
-python review_status.py -i <MCQ-JSON-file> -o <result-directory>
+python review_status.py -i MCQ-JSON-file -o myRESULTSdir
 ```
 
 **CeC edits stop here**
