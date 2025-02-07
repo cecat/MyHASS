@@ -9,7 +9,7 @@ Please email foster@anl.gov and stevens@anl.gov if you see things that are uncle
 
 ## Set up to access ALCF Inference Service 
 
-**Before you start:** Follow the instructions for 
+**Before you start:** We recommend you follow the instructions for 
 [ALCF Inference Service Prerequisites](https://github.com/argonne-lcf/inference-endpoints?tab=readme-ov-file#%EF%B8%8F-prerequisites)
 to set up your ALCF auth token, required to access models via the inference service.
 (You need to download and run `inference_auth_token.py`.)
