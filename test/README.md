@@ -1,6 +1,3 @@
----
-layout: none
----
 # Code for MCQ-based evaluation, etc.
 
 Here we describe Python programs for:
