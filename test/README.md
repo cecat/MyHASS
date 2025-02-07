@@ -27,9 +27,9 @@ Details on programs follow. Use `-h` to learn about other options.
 mkdir pdf-corpus parse-JSON-data
 ```
 
-2. Install additional dependencies *PyPDF2* and *pdfminer*.  
+2. Install additional dependencies *PyPDF2* and *pdfminer*.  (for the latter, we will install the entire package to make sure we have all of the modules we need such as *extract_text*)
 ```
-pip install PyPDF2 pdfminer
+pip install PyPDF2 pdfminer pdfminer.six
 ```
 Note: If you are using a Mac and you use HomeBrew, you may need to force the install
 to apply to your conda environment, i.e.: *python -m pip install PyPDF2 pdfminer*
