@@ -31,11 +31,8 @@ mkdir pdf-corpus parse-JSON-data
 ```
 pip install PyPDF2 pdfminer
 ```
-Note: If you are using a Mac and you use HomeBrew, you may need to do this instead, forcing the install
-to apply to your conda environment:
-```
-python -m pip install PyPDF2 pdfminer
-```
+Note: If you are using a Mac and you use HomeBrew, you may need to force the install
+to apply to your conda environment, i.e.: *python -m pip install PyPDF2 pdfminer*
 
 3. Extract text from PDFs with simple parser to create JSON files
 ```
