@@ -31,7 +31,7 @@ Populate your myPDFcache directory with your cache of PDF files.
 
 2. Set up your Conda environment.  If you already set up a conda env (such as via the
 [prerequisites](https://github.com/argonne-lcf/inference-endpoints?tab=readme-ov-file#%EF%B8%8F-prerequisites)
-page referenced above) then you can update your environment with the new dependencies you'll need here:
+page referenced above) then you can update your environment with the new dependencies you'll need here:  
 *conda env update --name <name_of_your_conda_env> --file environment.yml*. 
 Otherwise, create a new Conda environment as follows:
 ```
