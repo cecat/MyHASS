@@ -20,14 +20,14 @@ to set up your ALCF auth token, required to access models via the inference serv
 
 1. Set up your working directory. From within your working directory, create directories for your PDF files and for JSON output.
 The instructions below use the directory
-names *pdf-corpus* and *parse-JSON-data* for these two directories. Substitute your directory names as appropriate.
+names *myPDFcache* and *JSON-out* for these two directories. Substitute your directory names as appropriate.
 Details on programs follow. Use `-h` to learn about other options.
 
 ```
-mkdir pdf-corpus parse-JSON-data
+mkdir myPDFcache JSON-out
 ```
 
-Populate your pdf-corpus directory with your cache of PDF files.
+Populate your myPDFcache directory with your cache of PDF files.
 
 2. Set up your Conda environment.  If you already set up a conda env (such as via the
 [prerequisites](https://github.com/argonne-lcf/inference-endpoints?tab=readme-ov-file#%EF%B8%8F-prerequisites)
@@ -44,7 +44,7 @@ Conda environment by editing the environment.yml file (the name is specified in 
 
 3. Extract text from PDFs with simple parser to create JSON files
 ```
-python simple_parse.py -i pdf-corpus -o parse-JSON-data
+python simple_parse.py -i myPDFcache -o JSON-out
 ```
 
 + Or: Extract text from PDFs with higher-quality AdaParse 
