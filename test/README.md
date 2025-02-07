@@ -57,7 +57,7 @@ and augmenting each chunk with extra info. In this example we will specify the
 [alcf endpoints](https://github.com/argonne-lcf/inference-endpoints) 
 for more options)
 ```
-python generate_mcqs.py -i myJSONdir -o MCQ-JSON-file -m allenai/Llama-3.1-Tulu-3-405B
+python generate_mcqs.py -i myJSONdir -o MCQ-JSON-file -m 'mistralai/Mistral-7B-Instruct-v0.3'
 ```
 
 + Next is useful if you run `generate_mcqs.py` multiple times and thus have multiple JSON files
