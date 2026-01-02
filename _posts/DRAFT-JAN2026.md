@@ -9,16 +9,30 @@ categories: integrations lighting
 *January 3, 2026*
 
 Rather than spend hundreds of dollars on smart outdoor permanent holiday lights,
-I decided to use the same strategy that I have used for indoor smart LED strings.
-**(link to post)**, leveraging the
+I decided to use the same strategy that I have used for 
+<a href="https://blog.deepblueberry.com/integrations/lighting/2025/01/31/wled/" target="_blank" rel="noopener noreferrer">indoor smart LED strings</a> 
+leveraging the
 <a href="https://kno.wled.ge/" target="_blank" rel="noopener noreferrer">WLED Project</a>. 
 
-the WLED project has very nice
+The WLED project has very nice
 <a href="https://kno.wled.ge/basics/getting-started/" target="_blank" rel="noopener noreferrer">getting started</a>
 instructions, including wiring examples, and tips to avoid
 <a href="https://kno.wled.ge/basics/top5_mistakes/" target="_blank" rel="noopener noreferrer">common mistakes</a>.
 
-# Hardware
+Going from small indoor strings to larger, more power-hungry, outdoor LED strings
+introduced a bit more complexity regarding power, and this post documents two paths
+I took.  The first was a DIY approach, trying to build on the simpler indoor / small
+string solution.  Besides extra complexity for power, I ended up using switching from
+the D1 mini to an  ESP32 (finding that the D1 mini is really
+under-powered for this job).  The second approach was to evaluate several packaged systems,
+one of which I found to be ideal for my use case (3-4 strings of 50 LEDs).  This was not
+as fun as DIY but much more practical and of course a system with much better engineering
+than my DIY system.
+
+
+---
+
+# The DIY Solution
 
 ## Parts
 
@@ -167,10 +181,35 @@ Then press **RST** and wait ~10s for `WLED-AP` to appear.
 
 ---
 
-## ✅ Verified On:
+## This DIY system has Verified with:
 
 - ESP32-S3-WROOM-1-N16R8 Dev Board
 - macOS with `esptool.py v4.8.1`
 - WLED 0.15.3 (December 2025)
+- NovaBright P12 WS2811 IC 12V Digital ADDRESSABLE RGB Full Color Christmas Bullet Pixel LED String Lights
+  (18AWG 4 Inch Spacing IP68 Outdoor Light 50PX Set)
 
-Let me know if you'd like a version of this as a printable PDF or `.sh` flashing script.
+
+---
+
+# Commercial Off The Shelf (COTS) Solution
+
+I did a bunch of Internet searching, getting advice from AI chatbots, and product reviews to order 
+a packaged system that comes with WLED pre-flashed and would, I thought, allow me to plug a power
+supply in one and and one of my 50-LED strings at the other end - no DIY or fiddling needed.  It turns
+out that this device probably works fine for smaller strings, but could not light my 50-LED string.
+The good news was that my 50-LED string did not burn it up, as it has nice internal protections (it would
+briefly light the string, then the internal proections would audibly click to turn them off).  The bad 
+news was that I would need to separately power the LED strings.  This would still be easier than DIY,
+but I had hoped for a more turnkey solution.
+
+**Speculating below as the unit has not yet arrived... to be updated!**
+
+This led me to the second packaged unit I tried, which I concluded was the way to go (modulo not as
+fun as DIY) because of its capacity (4 strings) and excellent engineering with fuzes on each of the
+four channels and of with the simplicity of power in on one end and LED strings out on the other.
+
+With either of these devices, integration with HASS is the same as any WLED device, so you can look 
+at the instructions above or better yet at the HASS WLED Integration pages.
+
+https://www.home-assistant.io/integrations/wled/
