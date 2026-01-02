@@ -13,7 +13,6 @@ I decided to use the same strategy that I have used for
 <a href="https://blog.deepblueberry.com/integrations/lighting/2025/01/31/wled/" target="_blank" rel="noopener noreferrer">indoor smart LED strings</a> 
 leveraging the
 <a href="https://kno.wled.ge/" target="_blank" rel="noopener noreferrer">WLED Project</a>. 
-
 The WLED project has very nice
 <a href="https://kno.wled.ge/basics/getting-started/" target="_blank" rel="noopener noreferrer">getting started</a>
 instructions, including wiring examples, and tips to avoid
@@ -35,6 +34,25 @@ than my DIY system.
 # The DIY Solution
 
 ## Parts
+
+
+Power supply - https://www.amazon.com/dp/B08Q2TWYRJ for multiple strings (https://www.amazon.com/dp/B01GEA8PQA will be fine for 1-2 strings)
+Connectors - https://www.amazon.com/dp/B09CDQWTFG?
+ESP32-S3 - https://www.amazon.com/dp/B0F5QCK6X5
+12v to 5v Buck Converter - https://www.amazon.com/dp/B0D9M1KRYL
+(a bit bulky, but more robust and is waterproof so better for outside deployment.  For indoor
+it is probably fine to use https://www.amazon.com/dp/B0B779ZYN1)
+
+Misc Parts 
+Screw terminal block connectors - https://www.amazon.com/dp/B09ZTFKYCK
+Voltage boosters - https://www.amazon.com/dp/B08R6BCSYC (a bit more robust than https://www.amazon.com/dp/B07F7W91LC which also can work)
+Wiring for LED connector cables - https://www.amazon.com/dp/B0CFJV2M3B
+Big capacitors for 12v power - https://www.amazon.com/dp/B0B63CCQ2N
+
+or better yet buy a kit with both Electrolytic caps such as https://www.amazon.com/ALLECIN-Electrolytic-Capacitor-Assortment-Kit/dp/B0C1VBXCQM/ref=sr_1_1_sspa and 
+and ceremic caps such as https://www.amazon.com/BOJACK-Capacitor-Multilayer-Monolithic-Assortment/dp/B085RDTCCV/ref=sr_1_3?th=1
+
+**Below is all legacy to be updated**
 
 * <a href="https://www.amazon.com/dp/B081PX9YFV?ref=ppx_yo2ov_dt_b_fed_asin_title&th=1" target="_blank" rel="noopener noreferrer">D1 Mini</a>
 ($3) NOTE: Make sure you are ordering units with 4MB memory. There are 1MB versions and these cannot run WLED.
