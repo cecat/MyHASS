@@ -80,8 +80,7 @@ And dipped into my inventory for:
 * Screw terminal block connectors (three 2-terminal and two 3-terminal).
 * A 25v 1k uF electrolytic capacitor
 * A proto PCB board with power rails (something like
-this
-* <a href="https://www.amazon.com/ElectroCookie-Solderable-Breadboard-Electronics-Gold-Plated/dp/B07ZYNWJ1S"
+  <a href="https://www.amazon.com/ElectroCookie-Solderable-Breadboard-Electronics-Gold-Plated/dp/B07ZYNWJ1S"
    target="_blank" rel="noopener noreferrer">this</a>.
   should work - I could not find where I bought mine, but you don't want to mess with a
   straight-up stripboard (having to cut channels to place ICs).
