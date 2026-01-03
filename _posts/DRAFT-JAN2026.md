@@ -77,8 +77,14 @@ Besides the LED string(s) linked above, I used the following:
 
 And dipped into my inventory for:
 * A 330 ohm resistor for each string directly connected to the board (I designed for two).
-* Three 2-terminal and 2 3-terminal block connectors.
+* Screw terminal block connectors (three 2-terminal and two 3-terminal).
 * A 25v 1k uF electrolytic capacitor
+* A proto PCB board with power rails (something like
+this
+* <a href="https://www.amazon.com/ElectroCookie-Solderable-Breadboard-Electronics-Gold-Plated/dp/B07ZYNWJ1S"
+   target="_blank" rel="noopener noreferrer">this</a>.
+  should work - I could not find where I bought mine, but you don't want to mess with a
+  straight-up stripboard (having to cut channels to place ICs).
 
 ## Assembly
 
