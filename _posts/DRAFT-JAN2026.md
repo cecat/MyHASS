@@ -40,10 +40,11 @@ accidentally ordered some with 1MB rather than 4MB memory.  WLED will install ju
 version but it won't run.  Second, the D1 mini is a bit under-powered for anything but a small 
 string of LEDs, and an ESP32 is much more beefy, while only costing $2 more (so why compromise?).
 
-I first ordered some outdoor rated LED strings, specifically 
-
+I first ordered some outdoor rated LED strings, specifically some
 <a href="https://www.hollywoodleds.com/products/novabright-ws2811-ic-12v-digital-addressable-rgb-full-color-christmas-bullet-pixel-led-string-lights-18awg-4-inch-spacing-ip68-outdoor-light-50px-set" target="_blank" rel="noopener noreferrer">NovaBright WS2811</a>
-from Hollywood LEDs (I am sure many places sell them, but these were on sale and seem very solid/durable).
+strings from
+<a href="https://www.hollywoodleds.com" target="_blank" rel="noopener noreferrer">Hollygood LEDs</a>
+(I am sure many places sell them, but these were on sale and seem very solid/durable).
 
 To drive these I need 12v power and the data line is 5v.  This means I need to boost the data signal
 coming out of the ESP32 from 3.3v to 5v, so it's a bit more complex than the simple D1 mini driving a tiny
@@ -60,14 +61,13 @@ Besides the LED string(s) linked above, I used the following:
    <a href="https://www.amazon.com/dp/B01GEA8PQA"
    target="_blank" rel="noopener noreferrer">5A Power Supply</a>.
 * <a href="https://www.amazon.com/dp/B0F5QCK6X5"
-   target="_blank" rel="noopener noreferrer">ESP32</a>.
+   target="_blank" rel="noopener noreferrer">ESP32 controller</a>.
 * <a href="https://www.amazon.com/dp/B0D9M1KRYL"
    target="_blank" rel="noopener noreferrer">12v-to-5v Buck Converter</a>. This is a bit bulky but it's weatherproof and more robust than lower power / smaller form vactor alternatives such as
-* <a href="https://www.amazon.com/dp/B0B779ZYN1"
-   target="_blank" rel="noopener noreferrer">this</a>.
+      <a href="https://www.amazon.com/dp/B0B779ZYN1"
+      target="_blank" rel="noopener noreferrer">this</a>.
 * <a href="https://www.amazon.com/dp/B08R6BCSYC"
    target="_blank" rel="noopener noreferrer">Logic level shifter (to boost 3.3v to 5v).</a>.
-
 * <a href="https://www.amazon.com/dp/B09CDQWTFG"
    target="_blank" rel="noopener noreferrer">3-pin waterproof LED (pixel) connectors.</a>.
 * <a href="https://www.amazon.com/dp/B0CFJV2M3B"
