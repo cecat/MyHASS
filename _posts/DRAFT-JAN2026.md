@@ -9,7 +9,7 @@ categories: integrations lighting
 *January 3, 2026*
 
 Rather than spend hundreds of dollars on smart outdoor permanent holiday lights,
-I decided to use the same strategy that I have used for 
+I decided to try to use the same strategy that I used for 
 <a href="https://blog.deepblueberry.com/integrations/lighting/2025/01/31/wled/" target="_blank" rel="noopener noreferrer">indoor smart LED strings</a> 
 leveraging the
 <a href="https://kno.wled.ge/" target="_blank" rel="noopener noreferrer">WLED Project</a>. 
@@ -28,47 +28,59 @@ one of which I found to be ideal for my use case (3-4 strings of 50 LEDs).  This
 as fun as DIY but much more practical and of course a system with much better engineering
 than my DIY system.
 
+I am by no means an LED or lighting expert - I am just reporting my experience and would welcome
+advice.
 
 ---
 
 # The DIY Solution
 
+I started with a D1 mini and learned two things.  First, there are multiple D1 mini configs, and I
+accidentally ordered some with 1MB rather than 4MB memory.  WLED will install just fine on the 1MB
+version but it won't run.  Second, the D1 mini is a bit under-powered for anything but a small 
+string of LEDs, and an ESP32 is much more beefy, while only costing $2 more (so why compromise?).
+
+I first ordered some outdoor rated LED strings, specifically 
+
+<a href="https://www.hollywoodleds.com/products/novabright-ws2811-ic-12v-digital-addressable-rgb-full-color-christmas-bullet-pixel-led-string-lights-18awg-4-inch-spacing-ip68-outdoor-light-50px-set" target="_blank" rel="noopener noreferrer">NovaBright WS2811</a>
+from Hollywood LEDs (I am sure many places sell them, but these were on sale and seem very solid/durable).
+
+To drive these I need 12v power and the data line is 5v.  This means I need to boost the data signal
+coming out of the ESP32 from 3.3v to 5v, so it's a bit more complex than the simple D1 mini driving a tiny
+LED string.
+
+
 ## Parts
 
+Besides the LED string(s) linked above, I used the following:
 
-Power supply - https://www.amazon.com/dp/B08Q2TWYRJ for multiple strings (https://www.amazon.com/dp/B01GEA8PQA will be fine for 1-2 strings)
-Connectors - https://www.amazon.com/dp/B09CDQWTFG?
-ESP32-S3 - https://www.amazon.com/dp/B0F5QCK6X5
-12v to 5v Buck Converter - https://www.amazon.com/dp/B0D9M1KRYL
-(a bit bulky, but more robust and is waterproof so better for outside deployment.  For indoor
-it is probably fine to use https://www.amazon.com/dp/B0B779ZYN1)
+* <a href="https://www.amazon.com/dp/B08Q2TWYRJ"
+   target="_blank" rel="noopener noreferrer">10A Power Supply</a>.
+  (for a single string you can probably lie with a
+   <a href="https://www.amazon.com/dp/B01GEA8PQA"
+   target="_blank" rel="noopener noreferrer">5A Power Supply</a>.
+* <a href="https://www.amazon.com/dp/B0F5QCK6X5"
+   target="_blank" rel="noopener noreferrer">ESP32</a>.
+* <a href="https://www.amazon.com/dp/B0D9M1KRYL"
+   target="_blank" rel="noopener noreferrer">12v-to-5v Buck Converter</a>. This is a bit bulky but it's weatherproof and more robust than lower power / smaller form vactor alternatives such as
+* <a href="https://www.amazon.com/dp/B0B779ZYN1"
+   target="_blank" rel="noopener noreferrer">this</a>.
+* <a href="https://www.amazon.com/dp/B08R6BCSYC"
+   target="_blank" rel="noopener noreferrer">Logic level shifter (to boost 3.3v to 5v).</a>.
 
-Misc Parts 
-Screw terminal block connectors - https://www.amazon.com/dp/B09ZTFKYCK
-Voltage boosters - https://www.amazon.com/dp/B08R6BCSYC (a bit more robust than https://www.amazon.com/dp/B07F7W91LC which also can work)
-Wiring for LED connector cables - https://www.amazon.com/dp/B0CFJV2M3B
-Big capacitors for 12v power - https://www.amazon.com/dp/B0B63CCQ2N
+* <a href="https://www.amazon.com/dp/B09CDQWTFG"
+   target="_blank" rel="noopener noreferrer">3-pin waterproof LED (pixel) connectors.</a>.
+* <a href="https://www.amazon.com/dp/B0CFJV2M3B"
+   target="_blank" rel="noopener noreferrer">18 Gauge 3-conductor cable.</a>.
+* <a href="https://www.amazon.com/dp/B08R6BCSYC"
+   target="_blank" rel="noopener noreferrer">Logic level shifter (to boost 3.3v to 5v)</a>.
 
-or better yet buy a kit with both Electrolytic caps such as https://www.amazon.com/ALLECIN-Electrolytic-Capacitor-Assortment-Kit/dp/B0C1VBXCQM/ref=sr_1_1_sspa and 
-and ceremic caps such as https://www.amazon.com/BOJACK-Capacitor-Multilayer-Monolithic-Assortment/dp/B085RDTCCV/ref=sr_1_3?th=1
-
-**Below is all legacy to be updated**
-
-* <a href="https://www.amazon.com/dp/B081PX9YFV?ref=ppx_yo2ov_dt_b_fed_asin_title&th=1" target="_blank" rel="noopener noreferrer">D1 Mini</a>
-($3) NOTE: Make sure you are ordering units with 4MB memory. There are 1MB versions and these cannot run WLED.
-* <a href="https://www.amazon.com/dp/B09MKSVV5H" target="_blank" rel="noopener noreferrer">WS2812B/SMD5050 individually addressable LED Strip</a>
-($11)
-* <a href="https://www.amazon.com/dp/B08KT6BG5F" target="_blank" rel="noopener noreferrer">Self-adhesive LED strip mounting clips</a>
-($7 for 80)
-* A 330 ohm resistor. You could buy 100 for $7-8 or you may as well get virtually a life-time supply of different sizes such as in a
-<a href="https://www.amazon.com/BOJACK-Values-Resistor-Resistors-Assortment/dp/B08FHPJ5G8/ref=sr_1_7_sspa?th=1" target="_blank" rel="noopener noreferrer">kit like this</a> .
-* <a href="https://www.amazon.com/dp/B082QZGY9V?th=1" target="_blank" rel="noopener noreferrer">Low-profile USB power adapter</a>
-* <a href="https://www.amazon.com/dp/B0982S1FHY" target="_blank" rel="noopener noreferrer">1' USB-A to micro-USB cables</a>
-
+And dipped into my inventory for:
+* A 330 ohm resistor for each string directly connected to the board (I designed for two).
+* Three 2-terminal and 2 3-terminal block connectors.
+* A 25v 1k uF electrolytic capacitor
 
 ## Assembly
-
-(see <a href="https://kno.wled.ge/basics/top5_mistakes/" target="_blank" rel="noopener noreferrer">WLED common mistakes</a>).
 
 
 <img src="/media/wled/breadboard.png" width="200px"/>
