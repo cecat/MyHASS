@@ -145,7 +145,7 @@ point of failure FWIW.
 
 The unit will arrive in a few days, at which time I will test and update this post. 
 
-<img src="/media/outdoor/QuinLED-Dig-Quad.jpeg" width="200px"/>
+<img src="/media/outdoor/QuinLED-Dig-Quad.png" width="200px"/>
 
 *Above: QuinLED Dig-Quad.*
 
