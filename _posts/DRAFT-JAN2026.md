@@ -90,9 +90,9 @@ And dipped into my inventory for:
 ## Assembly
 
 
-<img src="/media/outdoor/breadboard.jpeg" width="200px"/>
-<img src="/media/outdoor/schematic.jpeg" width="200px"/>
-<img src="/media/outdoor/photo.jpeg" width="200px"/>
+<img src="/media/outdoor/breadboard.png" width="200px"/>
+<img src="/media/outdoor/schematic.png" width="200px"/>
+<img src="/media/outdoor/photo.png" width="200px"/>
 
 *Above: How to wire this up.  (L to R: Physical view; schematic; IRL).
 The IRL was my third layout, and I had run out of 2-port screw terminal
