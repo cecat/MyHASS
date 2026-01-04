@@ -104,13 +104,13 @@ the ESP32.  Only one header was needed since we only used pins on one side
 
 # Commercial Controllers
 
-The DIY approach above works for my particular setup but lacks the robustness of fuses
+My exploratory DIY approach above works for my particular setup but lacks the robustness of fuses
 or other protections for making mistakes in wiring, overloading the power, etc.
-I tried one off-the-shelf WLED controller and then ordered a second one that has capacity
-for up to four strings (much more heavy duty).  I am still evaluating the first one and the second
-one arrives next week, so this will be updated soon.
+I tried one off-the-shelf WLED controller  with capacity for a single string, and then ordered
+a second one that has capacity for up to four strings (much more heavy duty).  I am ver happy 
+with the first one and the second one arrives next week, so this post will be updated soon.
 
-## IoTorero Addressable Strip Controller (w/ build-in microphone)
+## IoTorero Addressable Strip Controller (w/ build-in microphone)  (WIP)
 
 I ordered the
 <a href="https://www.athom.tech/blank-1/ethernet-wled-esp32-addressable-dmx-led-strip-controller" target="_blank" rel="noopener noreferrer">IoTorero Controller</a>
@@ -119,34 +119,37 @@ from
 I have ordered from them in the past as they have lots of nice HASS-friendly devices including Tasmota and 
 WLED. They are in China but shipping is cheap and pretty quick (about a week).
 
-Initial testing suggests that either something is wrong (or I am doing something wrong), or 
-that this device does not have the capacity for even one of my 50-LED WS2811 outdoor light strings.
-I am interacting with their support team via emaail and they are quite responsive.  Given that they
-are surprised it's not working for me I am hopeful that the problem is either a bad unit or 
-operator error on my part (though it's a pretty simple device so the latter would surprise me!).
-I like the idea of a reasonably priced (~$20-30) controller for each string, so I hope this
-one will work out.
+The unit is pretty much turnkey and a nice solution for a single LED strip. It is also designed to control
+many types of LED strip, including dumb ones. 
 
-## Dig-Quad
+**Todo: daisy-chain experiment to see if it is powerful enough to drive two strings.**
+
+## Dig-Quad  (WIP)
 
 I'm eager for this one to arrive as it looks like a very sturdy design and is ideal for my intended
 use with 3-4 50-LED strings.  I ordered a 
-(<a href="https://www.drzzs.com/shop/digquad/" target="_blank" rel="noopener noreferrer">Dig-Quad</a>)
+(<a href="https://quinled.info/quinled-dig-quad/" target="_blank" rel="noopener noreferrer">QuinLED Dig-Quad</a>)
 from 
 (<a href="https://www.drzzs.com/shop/" target="_blank" rel="noopener noreferrer">Dr. Zzs</a>), 
 which is an interesting online shop with gadgets related to Home Assistant, sensing, and LED
 power and control.
 
 This controller can drive four strings, and is about twice the cost of the IoTorero so for
-my four strings it's 50% lower cost than four single-string controllers.
+my four strings it's 50% lower cost than four single-string controllers. It is, however, a single
+point of failure FWIW.
+
 The unit will arrive in a few days, at which time I will test and update this post. 
 
-# Install WLED on ESP32 / ESP32-S3 (Web Installer) + Wi-Fi Setup
 
+# Install WLED on ESP32 / ESP32-S3 (Web Installer) + Wi-Fi Setup [WIP needs updating]
 
 Once you have your WLED controller set up you will likely want to integrate it with Home Assistant.
 This guide uses **ESP32-S3-WROOM-1-N16R8** as an example, but the same flow should
 work for most **ESP32-family** boards supported by WLED.
+
+If you are integrating one of the commercial units you don't need to install WLED, so can skip to 
+Step 3.
+
 
 ---
 
