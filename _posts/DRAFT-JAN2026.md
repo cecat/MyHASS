@@ -63,9 +63,11 @@ Besides the LED string(s) linked above, I used the following:
 * <a href="https://www.amazon.com/dp/B0F5QCK6X5"
    target="_blank" rel="noopener noreferrer">ESP32 controller</a>.
 * <a href="https://www.amazon.com/dp/B0D9M1KRYL"
-   target="_blank" rel="noopener noreferrer">12v-to-5v Buck Converter</a>. This is a bit bulky but it's weatherproof and more robust than lower power / smaller form vactor alternatives such as
+   target="_blank" rel="noopener noreferrer">12v-to-5v Buck Converter</a>.
+   This is a bit bulky but it's weatherproof and more robust - can handle up to 3A whereas
+   lower power / smaller form vactor alternatives such as
       <a href="https://www.amazon.com/dp/B0B779ZYN1"
-      target="_blank" rel="noopener noreferrer">this</a>.
+      target="_blank" rel="noopener noreferrer">this</a> are only rated for 1.8A (still not bad!).
 * <a href="https://www.amazon.com/dp/B08R6BCSYC"
    target="_blank" rel="noopener noreferrer">Logic level shifter (to boost 3.3v to 5v).</a>.
 * <a href="https://www.amazon.com/dp/B09CDQWTFG"
@@ -88,15 +90,16 @@ And dipped into my inventory for:
 ## Assembly
 
 
-<img src="/media/wled/breadboard.png" width="200px"/>
-<img src="/media/wled/schematic.png" width="200px"/>
-<img src="/media/wled/pcb.png" width="200px"/>
+<img src="/media/outdoor/breadboard.jpeg" width="200px"/>
+<img src="/media/outdoor/schematic.jpeg" width="200px"/>
+<img src="/media/outdoor/photo.jpeg" width="200px"/>
 
-*Above: How to wire this up.  (L to R: Physical view; schematic; pcb layout).
-For completeness I show a barrel connector for power in case you wanted to go
-with an external, beefy power supply.  One could readily hard-wire the power
-supply but a connector offers better flexibility (e.g., you may wish to swap
-out the D1 Mini or the power supply later).*
+*Above: How to wire this up.  (L to R: Physical view; schematic; IRL).
+The IRL was my third layout, and I had run out of 2-port screw terminal
+blocks so used a 3-port for input (main) power at top left.  You can also
+see the board includes a header for a D1 mini, which is not used in favor of
+the ESP32.  Only one header was needed since we only used pins on one side
+(same with the ESP32).
 (<a href="/projects/ESP-to-LED-Strip.fzz" target="_blank" rel="noopener noreferrer">Download the Fritzing file</a>)
 
 # Commercial Controllers
@@ -110,14 +113,14 @@ one arrives next week, so this will be updated soon.
 ## IoTorero Addressable Strip Controller (w/ build-in microphone)
 
 I ordered the
-(<a href="https://www.athom.tech/blank-1/ethernet-wled-esp32-addressable-dmx-led-strip-controller" target="_blank" rel="noopener noreferrer">IoTorero Controller</a>)
+<a href="https://www.athom.tech/blank-1/ethernet-wled-esp32-addressable-dmx-led-strip-controller" target="_blank" rel="noopener noreferrer">IoTorero Controller</a>
 from 
-(<a href="https://www.athom.tech" target="_blank" rel="noopener noreferrer">Athom Tech</a>), which
-I have ordered from in the past as they have lots of nice HASS-friendly devices including Tasmota and 
+<a href="https://www.athom.tech" target="_blank" rel="noopener noreferrer">Athom Tech</a>x
+I have ordered from them in the past as they have lots of nice HASS-friendly devices including Tasmota and 
 WLED. They are in China but shipping is cheap and pretty quick (about a week).
 
 Initial testing suggests that either something is wrong (or I am doing something wrong), or 
-that this device does not have the capacity for even one of my 50-LED WS2811 outdoor light strings.  
+that this device does not have the capacity for even one of my 50-LED WS2811 outdoor light strings.
 I am interacting with their support team via emaail and they are quite responsive.  Given that they
 are surprised it's not working for me I am hopeful that the problem is either a bad unit or 
 operator error on my part (though it's a pretty simple device so the latter would surprise me!).
