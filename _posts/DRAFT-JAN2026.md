@@ -124,6 +124,11 @@ many types of LED strip, including dumb ones.
 
 **Todo: daisy-chain experiment to see if it is powerful enough to drive two strings.**
 
+<img src="/media/outdoor/Athom-IOTorero.jpeg" width="200px"/>
+<img src="/media/outdoor/Athom-wiring.jpeg" width="200px"/>
+
+*Above: Athom WLED server and wiring for WS2811 LED strings.*
+
 ## Dig-Quad  (WIP)
 
 I'm eager for this one to arrive as it looks like a very sturdy design and is ideal for my intended
@@ -140,6 +145,9 @@ point of failure FWIW.
 
 The unit will arrive in a few days, at which time I will test and update this post. 
 
+<img src="/media/outdoor/QuinLED-Dig-Quad.jpeg" width="200px"/>
+
+*Above: QuinLED Dig-Quad.*
 
 # Install WLED on ESP32 / ESP32-S3 (Web Installer) + Wi-Fi Setup [WIP needs updating]
 
