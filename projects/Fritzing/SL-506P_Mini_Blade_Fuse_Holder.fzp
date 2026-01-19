@@ -1,0 +1,114 @@
+<module fritzingVersion="0.9.10" moduleId="FuseHolder-MiniBlade-SL506P-PCB">
+  <version>3.3</version>
+  <author>ChatGPT</author>
+  <date>2026-01-09</date>
+  <title>Fuse Holder - Mini Blade (SL-506P / SL-506P-B) PCB 4-pin</title>
+  <label>Fuse Holder</label>
+  <tags>
+    <tag>fuse</tag>
+    <tag>fuse holder</tag>
+    <tag>blade fuse</tag>
+    <tag>mini blade</tag>
+    <tag>automotive</tag>
+    <tag>ATC</tag>
+    <tag>ATO</tag>
+    <tag>car fuse</tag>
+    <tag>boat</tag>
+    <tag>through hole</tag>
+  </tags>
+  <properties>
+    <property name="family">Fuse Holder</property>
+    <property name="variant">Mini Blade</property>
+    <property name="part number">SL-506P</property>
+    <property name="package">THT</property>
+    <property name="pins">4</property>
+  </properties>
+  <views>
+    <breadboardView>
+      <layers image="breadboard/svg.breadboard.sl506p.svg">
+        <layer layerId="breadboard" />
+      </layers>
+    </breadboardView>
+    <iconView>
+      <layers image="icon/svg.icon.sl506p.svg">
+        <layer layerId="icon" />
+      </layers>
+    </iconView>
+    <schematicView>
+      <layers image="schematic/svg.schematic.sl506p.svg">
+        <layer layerId="schematic" />
+      </layers>
+    </schematicView>
+    <pcbView>
+      <layers image="pcb/svg.pcb.sl506p.svg">
+        <layer layerId="silkscreen" />
+        <layer layerId="copper0" />
+        <layer layerId="copper1" />
+      </layers>
+    </pcbView>
+  </views>
+  <connectors>
+    <connector id="connector0" name="A (pin 1)" type="male">
+      <views>
+        <breadboardView>
+          <p svgId="connector0pin" terminalId="connector0terminal" layer="breadboard" />
+        </breadboardView>
+        <schematicView>
+          <p svgId="connector0pin" terminalId="connector0terminal" layer="schematic" />
+        </schematicView>
+        <pcbView>
+          <p svgId="connector0pad" layer="copper0" />
+        </pcbView>
+      </views>
+    </connector>
+    <connector id="connector1" name="A (pin 2)" type="male">
+      <views>
+        <breadboardView>
+          <p svgId="connector1pin" terminalId="connector1terminal" layer="breadboard" />
+        </breadboardView>
+        <schematicView>
+          <p svgId="connector1pin" terminalId="connector1terminal" layer="schematic" />
+        </schematicView>
+        <pcbView>
+          <p svgId="connector1pad" layer="copper0" />
+        </pcbView>
+      </views>
+    </connector>
+    <connector id="connector2" name="B (pin 1)" type="male">
+      <views>
+        <breadboardView>
+          <p svgId="connector2pin" terminalId="connector2terminal" layer="breadboard" />
+        </breadboardView>
+        <schematicView>
+          <p svgId="connector2pin" terminalId="connector2terminal" layer="schematic" />
+        </schematicView>
+        <pcbView>
+          <p svgId="connector2pad" layer="copper0" />
+        </pcbView>
+      </views>
+    </connector>
+    <connector id="connector3" name="B (pin 2)" type="male">
+      <views>
+        <breadboardView>
+          <p svgId="connector3pin" terminalId="connector3terminal" layer="breadboard" />
+        </breadboardView>
+        <schematicView>
+          <p svgId="connector3pin" terminalId="connector3terminal" layer="schematic" />
+        </schematicView>
+        <pcbView>
+          <p svgId="connector3pad" layer="copper0" />
+        </pcbView>
+      </views>
+    </connector>
+  </connectors>
+  <buses>
+    <bus id="busA">
+      <nodeMember connectorId="connector0" />
+      <nodeMember connectorId="connector1" />
+    </bus>
+    <bus id="busB">
+      <nodeMember connectorId="connector2" />
+      <nodeMember connectorId="connector3" />
+    </bus>
+  </buses>
+</module>
